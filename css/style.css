@@ -130,9 +130,12 @@ footer a{
 
 /* Experience */
 .experience {
-    background-color: #f2f4f6;
+    background-color: #00214d;
     padding: 1rem 8rem;
 
+    .title{
+        color: #fffffe;
+    }
     .isi-experience {
         display: flex;
         justify-content: space-around;
@@ -182,9 +185,82 @@ footer a{
                 height: 60px;
                 border-radius: 10px;
             }
+
+            .square-ul{
+                list-style-type: square;
+            }
         }
     }
+    
+}
 
+/* portfolio */
+.portfolio{
+    padding: 1rem 8rem;
+    background-color: #fffffe;
+
+
+    .portfolio-wrap{
+        /* background-color: #ff5470; */
+        /* width: 70vw; */
+        display: flex;
+        justify-content: space-around;
+        /* flex-direction: column; */
+
+        .portfolio-item{
+            width: 60vw;
+            display: flex;
+            background-color: #f2f4f6;
+            /* padding-left: 1em; */
+            
+            .portfolio-item-tech-stack{
+                background-color: #1b2d45;
+                /* padding: 1rem; */
+
+              
+            }
+            .portfolio-item-tech-stack i{
+                font-size: 24px;
+                color: #fde24f;
+            }
+            .portfolio-item-tech-stack ul{
+                list-style: none;
+                padding: 1em 0;
+                margin: 0;
+            }
+
+            .portfolio-item-tech-stack ul li{
+                display: inline;
+                margin: 1em .3em;
+            }
+
+            /* .project-name{
+                flex-grow: 1;
+                color: #ff5470;
+            } */
+
+            .portfolio-section-1{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin: 0 1.5em;
+
+                .project-info{
+                    .project-name{
+                        margin: 0;
+                    }
+                }
+                
+            }
+            
+            .foto-portfolio{
+                width: 70%;
+                height: 20vw;
+                background-color: #00214d;
+                margin-left: 1em;
+            }
+        }
+    }
 }
 
 /* Animation */
