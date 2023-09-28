@@ -68,6 +68,17 @@ header .logo h4 {
     margin: 0px;
 }
 
+aside{
+    width: 50%;
+    margin: auto;
+}
+
+aside img{
+    width: 90px;
+    /* border-radius: 50%; */
+}
+
+
 /* overview */
 
 .text-bold {
