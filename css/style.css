@@ -7,13 +7,13 @@
 }
 
 body {
-    /* height: 100vh; */
     font-family: "Quicksand", sans-serif;
     margin: 0;
 
     display: flex;
     flex-direction: column;
     scroll-behavior: smooth;
+
 }
 
 header.navbar-container {
@@ -33,7 +33,6 @@ header.navbar-container {
         justify-content: center;
         gap: 2rem 1rem;
     }
-
 }
 
 
@@ -46,27 +45,52 @@ header.navbar-container .nav-list li a {
     text-decoration: none;
     font-size: 1.05rem;
     font-weight: 500;
-    color: #00214d;
+    color: #ff5470;
     padding: .5rem 1.5rem;
-    /* border-radius: 999px; */
     transition: all .5s ease-in-out;
 }
 
 header.navbar-container .nav-list li:hover a {
     background-color: #00ebc7;
-    color: #00214d;
+    color: #fffffe;
 }
 
 header .logo {
     color: #00214d;
-    /* padding: 1em 1.5rem;
-    background-color: #00ebc7;
-    border-radius: 0px 30px 0px 30px; */
+
+    h4 {
+        margin: 0px;
+    }
 }
 
-header .logo h4 {
-    margin: 0px;
+
+/* aside */
+aside{
+    width: 50%;
+    margin: auto;
 }
+
+aside img{
+    width: 90px;
+}
+
+/* footer */
+footer{
+    background-color: #f2f4f6;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+
+    
+}
+footer a{
+        text-decoration: none;
+        font-weight: 600;
+        color: #00214d;
+        margin: 0 2rem;
+    
+}
+
 
 /* overview */
 
@@ -76,24 +100,20 @@ header .logo h4 {
 
 .overview {
     height: 100vh;
-    /* background-color: #fde24f; */
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 3rem;
     color: #00214d;
 
-
     .penjelasan-overview {
         width: 50vw;
-        /* background-color: beige; */
         color: #1b2d45;
         text-align: justify;
         animation: fadeInAndSlide 1s ease-in forwards;
         animation-delay: 0.5s;
         opacity: 0;
         transform: translateX(-20px);
-
     }
 
     .foto-overview img {
@@ -110,15 +130,12 @@ header .logo h4 {
 
 /* Experience */
 .experience {
-    /* height: 100vh; */
     background-color: #f2f4f6;
-    color: #1b2d45;
     padding: 1rem 8rem;
 
     .isi-experience {
         display: flex;
         justify-content: space-around;
-        /* width: 70vw; */
         flex-direction: column;
 
         .experience-item {
@@ -128,19 +145,13 @@ header .logo h4 {
             border-radius: 10px;
             padding: 1em;
             margin: 1em 0;
-            /* opacity: 0;
-            animation: fadeInAndSlide 1s ease-in forwards;
-            animation-delay: 0.5s;
-            transform: translateX(-20px); */
 
             .info-experience {
                 display: flex;
                 flex-direction: column;
-                /* align-items: start; */
+                color: #00214d;
                 padding: none;
                 margin: 0 1.5em;
-
-
 
                 .nama-organisasi,
                 .penjelasan-organisasi {
@@ -148,13 +159,11 @@ header .logo h4 {
                 }
 
                 .penjelasan-organisasi, .periode-experience{
-                    opacity: 60%;
+                    opacity: 80%;
                 }
 
                 .jabatan-experience p {
                     margin: 0;
-
-
                 }
 
                 .periode-experience {
@@ -163,17 +172,15 @@ header .logo h4 {
 
                 .responsibility-experience {
                     margin: .7em 0 2em;
+                    color: #00214d;
+                    opacity: 90%;
                 }
-
             }
 
             .foto-experience {
                 width: 60px;
                 height: 60px;
-                /* background-color: #00ebc7; */
                 border-radius: 10px;
-
-                
             }
         }
     }

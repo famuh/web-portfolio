@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     var overviewButton = document.getElementById("overview-button")
     var experienceButton = document.getElementById("experience-button")
+    var profileButton = document.getElementById("profile-button")
 
     overviewButton.addEventListener("click", function() {
         var targetOverview = document.getElementById("overview")
@@ -23,8 +24,15 @@ document.addEventListener("DOMContentLoaded", function() {
         window.scrollTo({
             behavior: "smooth",
             top: targetExperience.offsetTop
-        })
-        
+        })  
+    })
+
+    profileButton.addEventListener("click", function() {
+        var targetExperience = document.getElementById("profile")
+        window.scrollTo({
+            behavior: "smooth",
+            top: targetExperience.offsetTop
+        })  
     })
 
 
