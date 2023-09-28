@@ -27,13 +27,13 @@ document.addEventListener("DOMContentLoaded", function() {
         })  
     })
 
-    profileButton.addEventListener("click", function() {
-        var targetExperience = document.getElementById("profile")
-        window.scrollTo({
-            behavior: "smooth",
-            top: targetExperience.offsetTop
-        })  
-    })
+    // profileButton.addEventListener("click", function() {
+    //     var targetExperience = document.getElementById("profile")
+    //     window.scrollTo({
+    //         behavior: "smooth",
+    //         top: targetExperience.offsetTop
+    //     })  
+    // })
 
 
 })
