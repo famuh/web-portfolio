@@ -133,9 +133,10 @@ footer a{
     background-color: #00214d;
     padding: 1rem 8rem;
 
-    .title{
+    .title {
         color: #fffffe;
     }
+
     .isi-experience {
         display: flex;
         justify-content: space-around;
@@ -161,7 +162,8 @@ footer a{
                     margin: 0;
                 }
 
-                .penjelasan-organisasi, .periode-experience{
+                .penjelasan-organisasi,
+                .periode-experience {
                     opacity: 80%;
                 }
 
@@ -186,76 +188,74 @@ footer a{
                 border-radius: 10px;
             }
 
-            .square-ul{
+            .square-ul {
                 list-style-type: square;
             }
         }
     }
-    
+
 }
 
 /* portfolio */
-.portfolio{
+.portfolio {
     padding: 1rem 8rem;
     background-color: #fffffe;
+    height: 100vh;
 
 
-    .portfolio-wrap{
+    .portfolio-wrap {
         /* background-color: #ff5470; */
         /* width: 70vw; */
         display: flex;
         justify-content: space-around;
         /* flex-direction: column; */
 
-        .portfolio-item{
-            width: 60vw;
+        .portfolio-item {
+            width: 50vw;
             display: flex;
             background-color: #f2f4f6;
             /* padding-left: 1em; */
-            
-            .portfolio-item-tech-stack{
-                background-color: #1b2d45;
-                /* padding: 1rem; */
 
-              
+            .portfolio-item-tech-stack i {
+                font-size: 18px;
+                color: #00ebc7;
             }
-            .portfolio-item-tech-stack i{
-                font-size: 24px;
-                color: #fde24f;
-            }
-            .portfolio-item-tech-stack ul{
+
+            .portfolio-item-tech-stack ul {
                 list-style: none;
-                padding: 1em 0;
-                margin: 0;
+                padding: .5em 0;
+                margin: auto;
             }
 
-            .portfolio-item-tech-stack ul li{
+            .portfolio-item-tech-stack ul li {
                 display: inline;
-                margin: 1em .3em;
+                /* margin: 0 .3em; */
             }
 
-            /* .project-name{
-                flex-grow: 1;
-                color: #ff5470;
-            } */
-
-            .portfolio-section-1{
+            .portfolio-section-1 {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 margin: 0 1.5em;
+                max-width: 60%;
 
-                .project-info{
-                    .project-name{
-                        margin: 0;
+                .project-info {
+                    .project-name {
+                        margin: .7em 0;
+                        font-size: 20px;
+                    }
+
+                    .project-description {
+                        font-size: 14px;
+                        opacity: 80%;
                     }
                 }
-                
+
             }
-            
-            .foto-portfolio{
+
+            .foto-portfolio {
                 width: 70%;
-                height: 20vw;
+                /* height: 20vw; */
                 background-color: #00214d;
                 margin-left: 1em;
             }
