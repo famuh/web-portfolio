@@ -29,12 +29,9 @@ var portfolioButton = document.getElementById("portfolio-button")
     })
 
     portfolioButton.addEventListener("click", function() {
-        var targetExperience = document.getElementById("portfolio")
-        window.scrollTo({
-            behavior: "smooth",
-            top: targetExperience.offsetTop
-        })  
-    })
+        window.location.href = "portfolio.html";
+    });
+    
 
 
 

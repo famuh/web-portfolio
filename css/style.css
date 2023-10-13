@@ -9,21 +9,19 @@
 body {
     font-family: "Quicksand", sans-serif;
     margin: 0;
-
     display: flex;
     flex-direction: column;
     scroll-behavior: smooth;
 
 }
 
-header.navbar-container {
+.navbar-container {
     max-width: 1200px;
     width: 100%;
     margin-inline: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-
     padding-block: .5rem;
     z-index: 999;
 
@@ -36,12 +34,11 @@ header.navbar-container {
 }
 
 
-header.navbar-container .nav-list li {
+.navbar-container .nav-list li {
     list-style-type: none;
 }
 
-
-header.navbar-container .nav-list li a {
+.navbar-container .nav-list li a {
     text-decoration: none;
     font-size: 1.05rem;
     font-weight: 500;
@@ -50,7 +47,7 @@ header.navbar-container .nav-list li a {
     transition: all .5s ease-in-out;
 }
 
-header.navbar-container .nav-list li:hover a {
+.navbar-container .nav-list li:hover a {
     background-color: #00ebc7;
     color: #fffffe;
 }
@@ -196,106 +193,6 @@ footer a{
 
 }
 
-/* portfolio */
-.portfolio {
-    padding: 1rem 8rem;
-    background-color: #fffffe;
-    height: 100vh;
-
-
-    .portfolio-wrap {
-        /* background-color: #ff5470; */
-        /* width: 70vw; */
-        display: flex;
-        justify-content: space-around;
-        /* flex-direction: column; */
-
-        .portfolio-item {
-            width: 60vw;
-            height: 230px;
-            display: flex;
-            background-color: #f2f4f6;
-            /* padding-left: 1em; */
-
-            .portfolio-item-tech-stack i {
-                font-size: 18px;
-                color: #f2f4f6;
-            }
-
-            .portfolio-item-tech-stack ul {
-                list-style: none;
-                padding: .5em 1em;
-                margin: auto;
-                height: 100%;
-                background-color: #1b2d45;
-                
-            }
-
-            .portfolio-item-tech-stack ul li {
-                /* display: inline; */
-                color: #00ebc7;
-                margin: .5em 0;
-            }
-
-            .portfolio-section-1 {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                margin: 0 1.5em;
-                max-width: 60%;
-
-                .project-info {
-                    .project-name {
-                        margin: 0;
-                        font-size: 20px;
-                    }
-
-                    .project-description {
-                        font-size: 14px;
-                        opacity: 80%;
-                    }
-                }
-
-                .portfolio-item-tech-used{
-                    display: flex;
-                    margin-top: 10px;
-                    
-                    .item-tech-used{
-                        background-color: #1b2d45;
-                        margin: 0;
-                        padding: 4px 6px;
-                        border-radius: 7px;
-                        font-size: 13px;
-                        color: #f2f4f6;
-                        margin-right: 5px;
-                    }
-
-                }
-            }
-
-            .foto-portfolio {
-                flex: 1;
-                width: 200px;
-                height: 100%;
-                background-color: #00214d;
-                margin-left: 1em;
-              overflow: hidden;
-               
-            }
-            .foto-portfolio img{
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                transition: transform 0.3s ease-in-out;
-            }
-
-            .foto-portfolio:hover img {
-                transform: scale(1.1);
-              }
-        }
-    }
-
-}
 
 /* Animation */
 
