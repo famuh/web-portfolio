@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var experienceButton = document.getElementById("experience-button")
     // var profileButton = document.getElementById("profile-button")
 var portfolioButton = document.getElementById("portfolio-button")
+var contactButton = document.getElementById("contact-button")
 
     overviewButton.addEventListener("click", function() {
         var targetOverview = document.getElementById("overview")
@@ -22,6 +23,14 @@ var portfolioButton = document.getElementById("portfolio-button")
 
     experienceButton.addEventListener("click", function() {
         var targetExperience = document.getElementById("experience")
+        window.scrollTo({
+            behavior: "smooth",
+            top: targetExperience.offsetTop
+        })  
+    })
+
+    contactButton.addEventListener("click", function() {
+        var targetExperience = document.getElementById("contact")
         window.scrollTo({
             behavior: "smooth",
             top: targetExperience.offsetTop

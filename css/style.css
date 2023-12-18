@@ -111,6 +111,18 @@ footer a{
         animation-delay: 0.5s;
         opacity: 0;
         transform: translateX(-20px);
+
+        .skills-overview ul{
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+            
+        }
+
+        .skills-overview ul li img{
+            /* font-size: 52px; */
+            width: 28px;
+        }
     }
 
     .foto-overview img {
@@ -193,6 +205,24 @@ footer a{
 
 }
 
+
+/* Contact */
+.contact{
+    padding: 1rem 8rem;
+    h1 {
+        text-align: center;
+    }
+    .social-media ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        li a img {
+            width: 36px;
+            margin: 0.5em;
+        }
+    
+    }
+}
 
 /* Animation */
 
