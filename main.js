@@ -1,10 +1,15 @@
 var overview = document.getElementById("overview");
 var experience = document.getElementById("experience");
 
+
+window.onload = function () {
+    alert("Use desktop devices for a better experience ! mobile view will be available soon ^^")
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   var overviewButton = document.getElementById("overview-button");
   var experienceButton = document.getElementById("experience-button");
-  var portfolioButton = document.getElementById("portfolio-button");
+//   var portfolioButton = document.getElementById("portfolio-button");
   var contactButton = document.getElementById("contact-button");
 
   overviewButton.addEventListener("click", function () {
@@ -34,7 +39,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  portfolioButton.addEventListener("click", function () {
-    window.location.href = "./pages/portfolio.html";
-  });
 });
