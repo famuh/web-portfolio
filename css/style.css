@@ -61,34 +61,6 @@ header .logo {
 }
 
 
-/* aside
-aside{
-    width: 50%;
-    margin: auto;
-}
-
-aside img{
-    width: 90px;
-} */
-
-/* footer */
-/* footer{
-    background-color: #f2f4f6;
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
-
-    
-}
-footer a{
-        text-decoration: none;
-        font-weight: 600;
-        color: #00214d;
-        margin: 0 2rem;
-    
-} */
-
-
 /* overview */
 
 .text-bold {
@@ -120,7 +92,6 @@ footer a{
         }
 
         .skills-overview ul li img{
-            /* font-size: 52px; */
             width: 28px;
         }
     }

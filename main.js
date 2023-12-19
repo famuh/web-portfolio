@@ -35,6 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   portfolioButton.addEventListener("click", function () {
-    window.location.href = "/pages/portfolio.html";
+    window.location.href = "./pages/portfolio.html";
   });
 });
