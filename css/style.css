@@ -4,6 +4,8 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -68,7 +70,7 @@ header .logo {
 }
 
 .overview {
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -76,7 +78,7 @@ header .logo {
     color: #00214d;
 
     .penjelasan-overview {
-        width: 50vw;
+        width: 50dvw;
         color: #1b2d45;
         text-align: justify;
         animation: fadeInAndSlide 1s ease-in forwards;
@@ -91,9 +93,21 @@ header .logo {
             
         }
 
-        .skills-overview ul li img{
-            width: 28px;
+        .education-overview{
+            margin: 1em 0;
+            ul {
+                margin: 0.5em;
+            }
         }
+
+        .skills-overview ul {
+            margin: 0.5em;
+            li img{
+                width: 28px;
+            }
+
+        }
+        
     }
 
     .foto-overview img {
@@ -201,5 +215,90 @@ header .logo {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+
+/* Responsive */
+/* CSS Utama */
+
+@media screen and (max-width: 768px) {
+    /* Gaya khusus untuk layar berlebar kurang dari atau sama dengan 768px */
+
+    .navbar-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .nav-list ul {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .navbar-container .nav-list li a {
+            padding: .5rem 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        header .logo {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .overview {
+        flex-direction: column-reverse;
+        justify-content: center;
+
+        .penjelasan-overview {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        .foto-overview{
+            margin-bottom: 1em;
+        }
+    }
+
+    .experience {
+        padding: 1rem;
+
+        .isi-experience {
+            padding: 0;
+        }
+.foto-experience{
+    margin: auto;
+}
+        .experience-item {
+            flex-direction: column;
+            text-align: center;
+
+            .foto-experience {
+                margin-top: 1rem;
+            }
+
+            .info-experience {
+                margin: 1em 0;
+
+                .responsibility-experience {
+                    margin-bottom: 1em;
+                    ul li {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact {
+        padding: 1rem;
+
+        .social-media ul {
+            flex-direction: column;
+
+            li a img {
+                margin: 0.5em 0;
+            }
+        }
     }
 }

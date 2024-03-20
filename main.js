@@ -2,9 +2,9 @@ var overview = document.getElementById("overview");
 var experience = document.getElementById("experience");
 
 
-window.onload = function () {
-    alert("Use desktop devices for a better experience ! mobile view will be available soon ^^")
-}
+// window.onload = function () {
+//     alert("Use desktop devices for a better experience ! mobile view will be available soon ^^")
+// }
 
 document.addEventListener("DOMContentLoaded", function () {
   var overviewButton = document.getElementById("overview-button");
