@@ -273,6 +273,10 @@ header .logo {
 
         .foto-overview{
             margin-bottom: 1em;
+            .foto-aing{
+                /* width: 50%; */
+                margin: 0 auto;
+            }
         }
     }
 
