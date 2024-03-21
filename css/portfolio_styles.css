@@ -143,6 +143,8 @@ body {
               }
         }
 
+        
+
         .design-layout {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -162,5 +164,43 @@ body {
                 margin-top: 2rem;
               }
         }
+
+        .video-layout{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+
+            /* boiler plate */
+            .grid-item {
+                border: 1px solid #ddd;
+                padding: 20px;
+                text-align: center;
+                height: max-content;
+                img{
+                    width: 100%;
+                }
+              }
+        }
     }
 }
+
+
+@media screen and (max-width: 768px) {
+    .portfolio{
+        padding: 1em;
+    }
+    .portfolio .design {
+        .android-layout, .design-layout {
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 1rem;
+          }
+
+          
+          .video-layout{
+            grid-template-columns: repeat(1, 1fr);
+            
+        }
+
+    }
+  }
+
