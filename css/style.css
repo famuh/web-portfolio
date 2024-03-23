@@ -71,7 +71,7 @@ header .logo {
 }
 
 .overview {
-    height: 100%;
+    height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -87,14 +87,13 @@ header .logo {
         opacity: 0;
         transform: translateX(-20px);
 
-        .skills-overview ul{
+        .skills-overview ul {
             display: flex;
             list-style: none;
             justify-content: space-around;
-            
         }
 
-        .education-overview{
+        .education-overview {
             margin: 1em 0;
             ul {
                 margin: 0.5em;
@@ -103,12 +102,10 @@ header .logo {
 
         .skills-overview ul {
             margin: 0.5em;
-            li img{
+            li img {
                 width: 28px;
             }
-
         }
-        
     }
 
     .foto-overview img {
@@ -120,7 +117,6 @@ header .logo {
         animation-delay: 0.5s;
         transform: translateX(20px);
     }
-
 }
 
 /* Experience */
@@ -188,33 +184,32 @@ header .logo {
             }
         }
     }
-
 }
 
 
 /* Contact */
-.contact{
-    padding: 1rem 8rem;
-    /* h1 {
-        text-align: center;
-    } */
+.contact {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .social-media ul {
-        list-style: none;
         display: flex;
-        justify-content: center;
-        li a img {
-            width: 36px;
+        list-style: none;
+
+        li a i {
+            color: #00214d;
             margin: 0.5em;
         }
-    
     }
 }
-.made-with{
+
+.made-with {
     padding: 1em 0;
     background-color: #00214d;
     color: #fffffe;
 
-    .made-with-love{
+    .made-with-love {
         text-align: center;
         opacity: 70%;
     }
@@ -234,7 +229,6 @@ header .logo {
 /* CSS Utama */
 
 @media screen and (max-width: 768px) {
-    /* Gaya khusus untuk layar berlebar kurang dari atau sama dengan 768px */
 
     .navbar-container {
         flex-direction: column;
@@ -246,7 +240,6 @@ header .logo {
             margin-top: 1em;
             flex-direction: row;
             flex-wrap: wrap;
-            /* padding: 0; */
             gap: 1em;
         }
 
@@ -255,10 +248,6 @@ header .logo {
             width: 100%;
             text-align: center;
         }
-
-        /* .navbar-container .logo {
-            margin-bottom: 10em;
-        } */
     }
 
     .overview {
@@ -268,13 +257,12 @@ header .logo {
 
         .penjelasan-overview {
             width: 100%;
-            /* margin-bottom: 2rem; */
         }
 
-        .foto-overview{
+        .foto-overview {
             margin-bottom: 1em;
-            .foto-aing{
-                /* width: 50%; */
+
+            .foto-aing {
                 margin: 0 auto;
             }
         }
@@ -286,9 +274,11 @@ header .logo {
         .isi-experience {
             padding: 0;
         }
-.foto-experience{
-    margin: auto;
-}
+
+        .foto-experience {
+            margin: auto;
+        }
+
         .experience-item {
             flex-direction: column;
             text-align: center;
@@ -302,6 +292,7 @@ header .logo {
 
                 .responsibility-experience {
                     margin-bottom: 1em;
+
                     ul li {
                         text-align: left;
                     }
@@ -312,14 +303,12 @@ header .logo {
 
     .contact {
         padding: 1rem;
-
         .social-media ul {
             flex-direction: row;
 
             li a img {
                 margin: 0.5em;
                 width: 36px;
-
             }
         }
     }
