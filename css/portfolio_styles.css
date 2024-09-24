@@ -109,11 +109,11 @@ body {
 
                     .project-name a {
                         text-decoration: none;
-                        color: #1b2d45;
+                        color: #FFEB55;
                     }
 
                     .project-name a:hover {
-                        color: #ff5470;
+                        color: #b9a71b;
                     }
 
                     .project-name a :visited {
