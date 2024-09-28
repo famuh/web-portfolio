@@ -1,0 +1,126 @@
+/* skills */
+.skills-overview {
+    overflow: hidden;
+    width: 100%;
+    /* white-space: nowrap; */
+}
+
+.skills-overview ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    margin: 1em 0px;
+    font-weight: 600;
+    color: #00214d;
+}
+
+/* main skills */
+.main-skills {
+    height: 80vh;
+
+    background-color: #ff5470;
+    /* opacity: 50%; */
+    .specialities-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2em 3em;
+        text-align: center;
+
+        .glass-circle {
+            margin-bottom: 1em;
+            width: 80px;
+            /* Sesuaikan ukuran lingkaran */
+            height: 80px;
+            border-radius: 50%;
+            /* Membuat bentuk lingkaran */
+            background: rgba(255, 255, 255, 0.1);
+            /* Latar belakang transparan */
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            /* Border semi-transparan */
+            backdrop-filter: blur(10px);
+            /* Memberikan efek blur pada elemen di belakang */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Memberikan efek bayangan */
+            display: flex;
+            justify-content: center;
+            /* Menempatkan ikon di tengah secara horizontal */
+            align-items: center;
+            /* Menempatkan ikon di tengah secara vertikal */
+            position: relative;
+            overflow: hidden;
+            font-size: 24px;
+        }
+
+        .glass-circle::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0) 60%);
+            transform: rotate(45deg);
+        }
+
+
+        /* Hard skill */
+        .hardskill-wrapper ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            margin: 1em 0px;
+            font-weight: 600;
+            color: #00214d;
+            flex-wrap: wrap;
+            /* tambahkan properti ini untuk membuat item menjadi wrap ketika layar kecil */
+
+
+        }
+
+        .hardskill-wrapper ul li img {
+            width: 50px;
+            height: auto;
+            display: block;
+            margin: 0px 1em;
+        }
+
+    }
+
+
+}
+
+
+
+/* btn portfolio */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+    align-items: center;
+}
+
+.btn-portfolio {
+    background: none;
+    /* border: none; */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ff5470;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+    font-family: "Quicksand", sans-serif;
+    border: none;
+}
+
+.btn-portfolio i {
+    margin-left: 1em;
+}
+
+.btn-portfolio:hover {
+    color: black;
+}
+
+.btn-portfolio i {
+    margin-right: 5px;
+}
