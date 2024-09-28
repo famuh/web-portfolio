@@ -1,6 +1,14 @@
 const projects = {
   android: [
     {
+      name: "Al-Qur'an App",
+      description:
+        "",
+      tech: "Flutter, GetX, Theme Persistent",
+      image: "../img/absence-preview.png",
+      link: "#",
+    },
+    {
       name: "Absence",
       description:
         "An application to perform employee attendance by applying geofencing and camera media...",
