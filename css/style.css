@@ -123,10 +123,32 @@ header .logo {
         width: 300px;
         border-radius: 30px;
         opacity: 0;
-        background-color: #00ebc7;
+        
+        /* background-color: #00ebc7; */
         animation: fadeInAndSlide 1s ease-in forwards;
         animation-delay: 0.5s;
         transform: translateX(20px);
+    }
+}
+
+.square-dec{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    /* right: auto; */
+    /* top: 1em; */
+    background-color: #00ebc7;
+    /* border: 2px solid black; */
+    animation: rotateInfinite 3s linear infinite;
+
+}
+
+@keyframes rotateInfinite {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 
@@ -222,7 +244,6 @@ header .logo {
     font-weight: 600;
     color: #00214d;
     flex-wrap: wrap;
-    /* tambahkan properti ini untuk membuat item menjadi wrap ketika layar kecil */
 
 }
 
@@ -246,7 +267,7 @@ header .logo {
     /* border: none; */
     padding: 10px 20px;
     font-size: 16px;
-    color: #ff5470;
+    color: #5F5D9C;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     font-weight: 600;
@@ -255,7 +276,7 @@ header .logo {
 }
 
 .btn-portfolio:hover {
-    color: black;
+    color: #071952;
 }
 
 /* tes */
@@ -264,10 +285,33 @@ header .logo {
     display: flex;
     flex-direction: column;
     align-items: center;   
-    margin: 3em 1em;
+    /* margin: 3em 1em; */
+    padding: 3em 1em;
+    /* background-color: #EEF5FF; */
   }
   
-  .experience-cards {
+  .experience-section h4{
+    color: rgb(96, 153, 218);
+  }
+  .experience-section-sub{
+    color: #ff5470;
+  }
+
+.experience-info-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.experience-item-info{
+    margin-left: 1em;
+}
+
+.experience-joblist{
+    padding: 1em;
+    list-style-type: square;
+}
+
+.experience-cards {
     display: grid;
     gap: 0px 2em;
 
@@ -276,18 +320,25 @@ header .logo {
     align-items: center; 
   }
   
-  .experience-card {
-    background-color: #f2f2f2;
+.experience-card {
+    background: rgb(255, 251, 183);
+    background: radial-gradient(circle, rgba(255, 251, 183, 1) 0%, rgba(183, 255, 209, 1) 100%);
+    animation: gradientAnimation 8s ease infinite;
+    background-size: 300% 300%;
+    /* background-color: #f2f2f2; */
     padding: 20px;
     border-radius: 10px;
-    width: 300px;
-  }
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
 
-  .experience-card:nth-child(odd){
+.experience-card:nth-child(odd){
     margin-top: 2em;
-  }
+}
 
 
+ 
 /* Experience */
 .experience {
     padding: 1rem 8rem;
@@ -352,6 +403,10 @@ header .logo {
     }
 }
 
+.recent-project{
+    height: 100vh;
+    background-color: #5F5D9C;
+}
 
 /* Contact */
 .contact {
