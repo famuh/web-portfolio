@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
+
 
 *,
 *::before,
@@ -6,26 +10,31 @@
     box-sizing: border-box;
 }
 
+
+
 /* header */
 .logo{
     color: #1b2d45;
 }
 .navbar-container {
     margin-top: 1em;
-    max-width: 90vw;
-    width: 100%;
     margin-inline: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-block: .5rem;
+    /* padding-block: .5rem; */
     z-index: 999;
-    border-radius: 30px;
-    background-color: #ffffff; 
+    max-width: max-content;
+    border-radius: 20px;
+    /* background-color: #ffffff;  */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    background: linear-gradient(120deg, #ff99cc, #ffccff, #ccccff, #99ccff, #66ccff, #ccccff, #ffccff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
 
     .nav-list ul {
-        padding-left: 0;
+        padding: 0 1em;
+        /* padding-left: 0; */
         display: flex;
         justify-content: center;
         gap: 2rem 1rem;
@@ -40,17 +49,18 @@
 .navbar-container .nav-list li a {
     text-decoration: none;
     font-size: 1rem;
-    font-weight: 500;
-    color: #2d2e32; /* Gunakan warna yang lebih lembut */
+    /* font-weight: 500; */
+    color: #333; /* Gunakan warna yang lebih lembut */
     padding: 0.4rem 1.2rem;
     border-radius: 8px; /* Tambahkan sudut yang membulat agar terlihat lebih halus */
     transition: all 0.3s ease-in-out;
 }
 
 .navbar-container .nav-list li:hover a {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     /* text-decoration-color: #ff6b6b; */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk sedikit efek kedalaman */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 
@@ -61,68 +71,72 @@ body {
     display: flex;
     flex-direction: column;
     scroll-behavior: smooth;
-    /* background-color: #232946; */
     color: #232946;
+   
+
 }
 
 
 
+/* .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+} */
+.sweet-word{
+    text-align: center;
+    font-family: "Lora", serif;
+    width: 80%;
+    margin: 3em auto;
+
+}
+
+
+.creativity{
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+
+}
+.sweet-word-long{
+    font-family: "Quicksand", sans-serif;
+    color: #333333;
+    opacity: .7;
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* background: linear-gradient(120deg, #f7d2c4, #f2c464, #e9c46a, #e4d6f5, #c7b8ea, #a8d7f5, #87ceeb);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite; */
 .portfolio {
     margin-top: 1rem;
     padding: 1rem 8rem;
+    /* background-color: #00ebc7; */
     /* background-color: #fffffe; */
-    height: 100vh;
+    /* height: 100%; */
 
-    .portfolio-wrap {
-        .portfolio-item {
-            width: 60vw;
-            height: 230px;
-            display: flex;
-            background-color: #f2f4f6;
-            margin: 1em auto;
-
-            .portfolio-item-tech-stack i {
-                font-size: 18px;
-                color: #f2f4f6;
-            }
-
-            .portfolio-item-tech-stack ul {
-                list-style: none;
-                padding: .5em 1em;
-                margin: auto;
-                height: 100%;
-                background-color: #1b2d45;
-
-            }
-
-            .portfolio-item-tech-stack ul li {
-                /* display: inline; */
-                color: #00ebc7;
-                margin: .5em 0;
-            }
-
-            .foto-portfolio {
-                flex: 1;
-                width: 100%;
-                height: 100%;
-                background-color: #00214d;
-                margin-left: 1em;
-                overflow: hidden;
-
-            }
-
-            .foto-portfolio img {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                transition: transform 0.3s ease-in-out;
-            }
-
-            .foto-portfolio:hover img {
-                transform: scale(1.1);
-            }
-        }
-    }
+   
 
 
     .design {
@@ -179,18 +193,19 @@ body {
 
             }
             .grid-item {
-                border: 1px solid #ddd;
+                /* border: 3px solid #ddd; */
                 padding: 20px;
                 text-align: center;
+                background-color: rgba(0, 0, 0, 5%);
                 height: max-content;
                 img{
                     width: 100%;
                 }
               }
 
-              .grid-item:nth-child(even){
+              /* .grid-item:nth-child(odd){
                 margin-top: 2rem;
-              }
+              } */
         }
 
         
