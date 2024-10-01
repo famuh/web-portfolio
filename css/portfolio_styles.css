@@ -6,15 +6,65 @@
     box-sizing: border-box;
 }
 
+/* header */
+.logo{
+    color: #1b2d45;
+}
+.navbar-container {
+    margin-top: 1em;
+    max-width: 90vw;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-block: .5rem;
+    z-index: 999;
+    border-radius: 30px;
+    background-color: #ffffff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+
+    .nav-list ul {
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        gap: 2rem 1rem;
+        list-style-type: none;
+
+    }
+
+
+}
+
+
+.navbar-container .nav-list li a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2d2e32; /* Gunakan warna yang lebih lembut */
+    padding: 0.4rem 1.2rem;
+    border-radius: 8px; /* Tambahkan sudut yang membulat agar terlihat lebih halus */
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-container .nav-list li:hover a {
+    text-decoration: underline;
+    /* text-decoration-color: #ff6b6b; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk sedikit efek kedalaman */
+}
+
+
+
 body {
     font-family: "Quicksand", sans-serif;
     margin: 0;
     display: flex;
     flex-direction: column;
     scroll-behavior: smooth;
-    background-color: #232946;
-    color: #fffffe;
+    /* background-color: #232946; */
+    color: #232946;
 }
+
 
 
 .portfolio {
@@ -78,7 +128,7 @@ body {
     .design {
         .android-layout {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
             
             .portfolio-section-1 {
@@ -157,6 +207,7 @@ body {
                 img{
                     width: 100%;
                 }
+                
               }
 
               .grid-item:nth-child(even){

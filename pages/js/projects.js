@@ -5,7 +5,7 @@ const projects = {
       description:
         "",
       tech: "Flutter, GetX, Theme Persistent",
-      image: "../img/absence-preview.png",
+      image: "../img/porto/alquranapp.png",
       link: "#",
     },
     {

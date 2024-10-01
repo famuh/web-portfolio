@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
 *,
 *::before,
@@ -25,7 +26,7 @@ body {
 
 .navbar-container {
     margin-top: 1em;
-    max-width: 1200px;
+    max-width: 90vw;
     width: 100%;
     margin-inline: auto;
     display: flex;
@@ -33,17 +34,20 @@ body {
     align-items: center;
     padding-block: .5rem;
     z-index: 999;
+    border-radius: 30px;
+    background-color: #ffffff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 
-    .nav-list ul {
+    /* .nav-list ul {
         padding-left: 0;
         display: flex;
         justify-content: center;
         gap: 2rem 1rem;
-    }
+    } */
 }
 
 
-.navbar-container .nav-list li {
+/* .navbar-container .nav-list li {
     list-style-type: none;
 }
 
@@ -59,15 +63,19 @@ body {
 .navbar-container .nav-list li:hover a {
     background-color: #00ebc7;
     color: #fffffe;
-}
+} */
 
 header .logo {
-    color: #00214d;
+    /* color: #00214d; */
+    color: #333; /* Warna teks yang netral dan modern */
+
 
     h4 {
         margin: 0px;
     }
 }
+
+
 
 .title {
     margin: 1em 0px;
@@ -123,7 +131,7 @@ header .logo {
         width: 300px;
         border-radius: 30px;
         opacity: 0;
-        
+
         /* background-color: #00ebc7; */
         animation: fadeInAndSlide 1s ease-in forwards;
         animation-delay: 0.5s;
@@ -131,15 +139,19 @@ header .logo {
     }
 }
 
-.square-dec{
+.square-dec {
     width: 50px;
     height: 50px;
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* right: auto; */
     /* top: 1em; */
     background-color: #00ebc7;
     /* border: 2px solid black; */
     animation: rotateInfinite 3s linear infinite;
+    font-size: 24px;
 
 }
 
@@ -147,6 +159,7 @@ header .logo {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -238,12 +251,13 @@ header .logo {
 .hardskill-wrapper ul {
     display: flex;
     list-style: none;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 1em 0px;
     /* padding: 1em; */
     font-weight: 600;
     color: #00214d;
     flex-wrap: wrap;
+
 
 }
 
@@ -276,7 +290,8 @@ header .logo {
 }
 
 .btn-portfolio:hover {
-    color: #071952;
+    color: #F8FAE5;
+    background-color: #5F5D9C;
 }
 
 /* tes */
@@ -284,29 +299,34 @@ header .logo {
 .experience-section {
     display: flex;
     flex-direction: column;
-    align-items: center;   
+    align-items: center;
+    justify-content: center;
     /* margin: 3em 1em; */
     padding: 3em 1em;
+    flex-wrap: wrap;
     /* background-color: #EEF5FF; */
-  }
-  
-  .experience-section h4{
-    color: rgb(96, 153, 218);
-  }
-  .experience-section-sub{
-    color: #ff5470;
-  }
-
-.experience-info-wrapper{
-    display: flex;
-    align-items: center;
+    
 }
 
-.experience-item-info{
+.experience-section h4 {
+    color: rgb(96, 153, 218);
+}
+
+.experience-section-sub {
+    color: #ff5470;
+}
+
+.experience-info-wrapper {
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.experience-item-info {
     margin-left: 1em;
 }
 
-.experience-joblist{
+.experience-joblist {
     padding: 1em;
     list-style-type: square;
 }
@@ -315,11 +335,12 @@ header .logo {
     display: grid;
     gap: 0px 2em;
 
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;  /* Memusatkan grid secara horizontal */
-    align-items: center; 
-  }
-  
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    /* Memusatkan grid secara horizontal */
+    align-items: center;
+}
+
 .experience-card {
     background: rgb(255, 251, 183);
     background: radial-gradient(circle, rgba(255, 251, 183, 1) 0%, rgba(183, 255, 209, 1) 100%);
@@ -328,19 +349,88 @@ header .logo {
     /* background-color: #f2f2f2; */
     padding: 20px;
     border-radius: 10px;
-    width: 500px;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.experience-card:nth-child(odd){
+/* .experience-card:nth-child(odd){
     margin-top: 2em;
+} */
+
+
+.experience-org {
+    display: grid;
+    gap: 0px 2em;
+
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    /* Memusatkan grid secara horizontal */
+    align-items: center;
 }
 
-
- 
 /* Experience */
-.experience {
+.experience-item {
+    display: flex;
+    align-items: start;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    animation: gradientAnimation 8s ease infinite;
+    background-size: 300% 300%;
+
+    border-radius: 10px;
+    padding: 1em;
+    max-width: 50vw;
+    /* width: 350px; */
+    /* margin: 1em 0; */
+
+    .info-experience {
+        display: flex;
+        flex-direction: column;
+        color: #00214d;
+        padding: none;
+        margin: 0 1.5em;
+
+        .nama-organisasi {
+            color: black;
+            margin-bottom: .5em;
+        }
+
+        .penjelasan-organisasi {
+            margin: 0;
+        }
+
+        .penjelasan-organisasi {
+            color: #00214d;
+        }
+
+        .jabatan-experience p {
+            margin: 0;
+        }
+
+        .periode-experience {
+            font-size: 14px;
+        }
+
+        .responsibility-experience {
+            margin: .7em 0 2em;
+            color: #00214d;
+            opacity: 90%;
+        }
+    }
+
+    .foto-experience {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+    }
+
+    .square-ul {
+        list-style-type: square;
+    }
+}
+
+/* .experience {
     padding: 1rem 8rem;
 
 
@@ -350,62 +440,38 @@ header .logo {
         justify-content: space-around;
         flex-direction: column;
 
-        .experience-item {
-            display: flex;
-            align-items: start;
-            background-color: #e6e68f;
-            border-radius: 10px;
-            padding: 1em;
-            margin: 1em 0;
-
-            .info-experience {
-                display: flex;
-                flex-direction: column;
-                color: #00214d;
-                padding: none;
-                margin: 0 1.5em;
-
-                .nama-organisasi,
-                .penjelasan-organisasi {
-                    margin: 0;
-                }
-
-                .penjelasan-organisasi,
-                .periode-experience {
-                    opacity: 80%;
-                }
-
-                .jabatan-experience p {
-                    margin: 0;
-                }
-
-                .periode-experience {
-                    font-size: 14px;
-                }
-
-                .responsibility-experience {
-                    margin: .7em 0 2em;
-                    color: #00214d;
-                    opacity: 90%;
-                }
-            }
-
-            .foto-experience {
-                width: 60px;
-                height: 60px;
-                border-radius: 10px;
-            }
-
-            .square-ul {
-                list-style-type: square;
-            }
-        }
+      
     }
-}
+} */
 
-.recent-project{
+.recent-project {
     height: 100vh;
     background-color: #5F5D9C;
+}
+.quote{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* width: 0vw; */
+    height: 100vh;
+
+
+    
+}
+
+.quote h1{
+    max-width: 80vw;
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.reachme{
+    height: 100vh;
+    background-color: #333;
 }
 
 /* Contact */
@@ -426,7 +492,7 @@ header .logo {
     }
 }
 
-.made-with {
+/* .made-with {
     padding: 1em 0;
     background-color: #00214d;
     color: #fffffe;
@@ -435,7 +501,7 @@ header .logo {
         text-align: center;
         opacity: 70%;
     }
-}
+} */
 
 /* Animation */
 
@@ -451,6 +517,11 @@ header .logo {
 /* CSS Utama */
 
 @media screen and (max-width: 768px) {
+    .experience-item {
+
+        max-width: 100vw;
+
+    }
 
     .navbar-container {
         flex-direction: column;
@@ -472,18 +543,23 @@ header .logo {
         }
     }
 
-    .experience-cards {
+    .experience-cards,
+    .experience-org {
         display: grid;
         gap: 1em;
-    
+
         grid-template-columns: repeat(1, 1fr);
-        justify-content: center;  /* Memusatkan grid secara horizontal */
-        align-items: center; 
-      }
-      .experience-card:nth-child(odd){
+        justify-content: center;
+        /* Memusatkan grid secara horizontal */
+        align-items: center;
+    }
+
+    .experience-card:nth-child(odd) {
         margin-top: 0px;
-      }
-      
+    }
+
+
+
     .overview {
         flex-direction: column-reverse;
         justify-content: center;

@@ -109,8 +109,7 @@ const hardskillList = [
   },
   {
     name: "Capcut",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Funnamed.png?alt=media&token=a071120b-62dd-4ea6-932d-855dfb654711",
+    image:"https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fimage%2Funnamed.png?alt=media&token=b87dfa24-47f0-49e6-a587-f2c4dbd29ee3"
   },
 ];
 
@@ -133,66 +132,44 @@ const experienceList = [
     location: "Freelance",
     description: "Collaborate with teams and clients in solving problems faced by clients to design or build applications for the benefit of individuals, groups, or companies.",
     date: "Nov 23 - Jul 24",
-    img: "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Funnamed.png?alt=media&token=a071120b-62dd-4ea6-932d-855dfb654711",
-    isList : true,
-    jobList : [
-      "123",
-      "1234",
-      "asdc"
-    ]
-  },
-  {
-    title: "UI Designer & Mobile Developer",
-    location: "Freelance",
-    description: "Collaborate with teams and clients in solving problems faced by clients to design or build applications for the benefit of individuals, groups, or companies.",
-    date: "Nov 23 - Jul 24",
-    img: "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Funnamed.png?alt=media&token=a071120b-62dd-4ea6-932d-855dfb654711",
+    img: "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fexperience%2FGroup%201.png?alt=media&token=ad410711-567d-4b0f-9bc2-8bd30407b932",
     isList : false,
     jobList : [
-      "123",
+      "De",
       "1234",
       "asdc"
     ]
   },
   {
-    title: "UI Designer & Mobile Developer",
-    location: "Freelance",
-    description: "Collaborate with teams and clients in solving problems faced by clients to design or build applications for the benefit of individuals, groups, or companies.",
-    date: "Nov 23 - Jul 24",
-    img: "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Funnamed.png?alt=media&token=a071120b-62dd-4ea6-932d-855dfb654711",
-    isList : true,
+    title: "Mobile Development",
+    location: "Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka",
+    description: "Bangkit is a career readiness program aimed at producing high-caliber technical talent for world-class technology companies and startups in Indonesia, fully supported by Google, GoTo, and Traveloka.",
+    date: "Feb 23 - Aug 23",
+    img: 
+    "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fexperience%2Fbangkit.jpeg?alt=media&token=75022800-7541-493a-ab6c-a7833684c3dc",
+    isList : false,
     jobList : [
-      "123",
-      "1234",
-      "asdc"
+      "Completed Android classes, including Basic Android, Fundamental Android, Android Intermediate, and Android Jetpack Compose.",
+      "Completed soft skills and English classes to support my career and professionalism.completed soft skills and English classes to support my career and professionalism.",
+      "Collaborated with other participants in Mobile Development, Machine Learning, and Cloud Computing to create an Android application.",
+      "Key Learning: Kotlin, Jetpack Compose, SOLID principles, UX Design."
     ]
   },
   {
-    title: "UI Designer & Mobile Developer",
-    location: "Freelance",
-    description: "Collaborate with teams and clients in solving problems faced by clients to design or build applications for the benefit of individuals, groups, or companies.",
-    date: "Nov 23 - Jul 24",
-    img: "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Funnamed.png?alt=media&token=a071120b-62dd-4ea6-932d-855dfb654711",
-    isList : true,
+    title: "Multi-Platform Flutter and Back-End Node.Js",
+    location: "Kampus Merdeka SIB X Dicoding",
+    description: "Participated in the Independent Study Batch 3 Cohort at Dicoding Indonesia through the Kampus Merdeka x Independent Certified Study program by the Directorate General of Higher Education, Ministry of Education and Culture of Indonesia, and earned the title of Best Graduate.",
+    date: "Aug 22 - Des 22",
+    img:"https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fexperience%2Fkampusmerdeka.jpeg?alt=media&token=c3108da4-e911-47fa-91ac-688a3206bb77",
+    isList : false,
     jobList : [
-      "123",
-      "1234",
-      "asdc"
+      "Obtained the title of best graduate at the end of the program.",
+      "Became a Peer Tutor for the Study Group: Teaching and assisting other participants with challenges they faced during their studies.",
+      "Completed soft skill classes to support career development and professional ethics.",
+      "Created an Android application using Flutter as a final project assignment."
     ]
   },
-  {
-    title: "UI Designer & Mobile Developer",
-    location: "Freelance",
-    description: "Collaborate with teams and clients in solving problems faced by clients to design or build applications for the benefit of individuals, groups, or companies.",
-    date: "Nov 23 - Jul 24",
-    img: "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Funnamed.png?alt=media&token=a071120b-62dd-4ea6-932d-855dfb654711",
-    isList : true,
-    jobList : [
-      "123",
-      "1234",
-      "asdc"
-    ]
-  },
+ 
 
 ]
 
