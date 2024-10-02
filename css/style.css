@@ -150,20 +150,12 @@ header .logo {
     /* top: 1em; */
     background-color: #00ebc7;
     /* border: 2px solid black; */
-    animation: rotateInfinite 3s linear infinite;
+    animation: rotateInfinite 2s linear infinite;
     font-size: 24px;
 
 }
 
-@keyframes rotateInfinite {
-    0% {
-        transform: rotate(0deg);
-    }
 
-    100% {
-        transform: rotate(360deg);
-    }
-}
 
 .skills-overview {
     overflow: hidden;
@@ -509,6 +501,19 @@ header .logo {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes rotateInfinite {
+    to {
+        opacity: 1;
+    }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
 

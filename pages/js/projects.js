@@ -1,9 +1,8 @@
 const projects = {
   android: [
     {
-      name: "Al-Qur'an App",
-      description:
-        "",
+      name: "Al-Qur'an",
+      description: "",
       tech: "Flutter, GetX, Theme Persistent",
       image: "../img/porto/alquranapp.png",
       link: "#",
@@ -45,7 +44,7 @@ const projects = {
       description:
         "Swalokal helps users find out where their desired product is sold by simply entering the image of the product they are looking for.",
       tech: "Kotlin, XML, FastApi, Python, Flask, TensorFlow, Figma",
-      image: "../img/swalokal-preview.png",
+      image: "../img/swalokal-prev.png",
       link: "#",
     },
     {
@@ -86,16 +85,7 @@ const projects = {
     },
     // Add more projects here
   ],
-  // backend: [
-  //     {
-  //         name: "Bookshelf API",
-  //         description: "A simple back-end application with a book lending theme created using node.js...",
-  //         tech: "Node.Js, Eslint",
-  //         image: "../img/backend-bookshelf-preview.png",
-  //         link: ""
-  //     },
-  //     // Add more projects here
-  // ],
+
   graphicDesign: [
     "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fimage%2FBrosur%20FAIS%20ke%207.jpg?alt=media&token=03fa3bf9-8ce1-47b1-b04a-86bc5fed4269",
     "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fimage%2Fbrosur%20alpha.jpg?alt=media&token=47dc14a5-1a6a-4ab1-a046-ac6dcb4989ff",
@@ -145,7 +135,6 @@ const projects = {
       description: "",
       link: "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fvideo%2Fperkenalan%20bitsmikro.mp4?alt=media&token=d8580da9-910b-444a-a1ef-192b45bdb5d0",
     },
-    // "https://www.youtube.com/embed/JIQGVRRAKv4",
     // Add more video links here
   ],
 };
@@ -158,41 +147,75 @@ function renderProjects(containerId, projectList, isVideo = false) {
     item.classList.add("grid-item");
     if (isVideo) {
       item.innerHTML = `
+                  
                 <iframe width="320" height="240" src="${project.link}" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                   <div class="video-information">
+                <div class="card">
+                  <div class="video-information">
                     <p>${project.title}</p>
                     <p>${project.description}</p>
                    </div>
+                  </div>   
+                
                     `;
     } else if (typeof project === "object") {
       item.innerHTML = `
-                        <div class="portfolio-section-1">
-                            <div class="foto-portfolio">
-                                <a href="${project.link}">
-                                    <img src="${project.image}" class="foto-preview-portfolio" alt="${project.name} preview">
-                                </a>
-                            </div>
-                            <div class="project-info">
-                                <h2 class="project-name"><a href="${project.link}">${project.name}</a></h2>
-                                <p class="project-description">${project.description}</p>
-                            </div>
-                            <div class="tech-used">
-                                <p>Tech : ${project.tech}</p>
-                            </div>
-                        </div>
+            <div class="card">
+                    <div class="card-content">
+                      <h2 class="title">${project.name}</h2>
+                      <p class="description">${project.description}</p> 
+                    </div>
+                    <div class="card-image">
+                    <a href="${project.image}" target="_self"><img src="${project.image}" alt="${project.name}"></a>
+                    </div>
+            </div>
                     `;
     } else {
       item.innerHTML = `
-      <a href="${project}" target="_self"><img src="${project}" alt="" srcset=""></a>
+      <a href="${project}" target="_self"><img src="${project}" alt="" srcset="" class="image-portfolio"></a>
       `;
     }
     container.appendChild(item);
   });
 }
 
-// Render all project sections
-renderProjects("androidProjects", projects.android);
-renderProjects("websiteProjects", projects.website);
-// renderProjects('backendProjects', projects.backend);
-renderProjects("graphicDesign", projects.graphicDesign);
-renderProjects("videography", projects.videography, true);
+document.addEventListener("DOMContentLoaded", () => {
+  // Render default projects (Mobile)
+  renderProjects("portfolioContainer", projects.android);
+
+  // Get menu items
+  const menuItems = document.querySelectorAll(".nav-list li");
+
+  // Add click event listeners for each menu item
+  menuItems.forEach((item) => {
+    item.addEventListener("click", (event) => {
+      // Prevent default link behavior
+      event.preventDefault();
+
+      // Remove 'active' class from all menu items
+      menuItems.forEach((menuItem) => menuItem.classList.remove("active"));
+
+      // Add 'active' class to the clicked menu item
+      item.classList.add("active");
+
+      // Clear the container before rendering new projects
+      const container = document.getElementById("portfolioContainer");
+      container.innerHTML = "";
+
+      // Determine which projects to render
+      switch (item.id) {
+        case "mobile-btn":
+          renderProjects("portfolioContainer", projects.android);
+          break;
+        case "web-btn":
+          renderProjects("portfolioContainer", projects.website);
+          break;
+        case "design-btn":
+          renderProjects("portfolioContainer", projects.graphicDesign);
+          break;
+        case "video-btn":
+          renderProjects("portfolioContainer", projects.videography, true);
+          break;
+      }
+    });
+  });
+});

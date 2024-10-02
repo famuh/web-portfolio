@@ -13,9 +13,19 @@
 
 
 /* header */
-.logo{
+.logo {
     color: #1b2d45;
 }
+
+/* .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+} */
+
 .navbar-container {
     margin-top: 1em;
     margin-inline: auto;
@@ -27,7 +37,7 @@
     max-width: max-content;
     border-radius: 20px;
     /* background-color: #ffffff;  */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background: linear-gradient(120deg, #ff99cc, #ffccff, #ccccff, #99ccff, #66ccff, #ccccff, #ffccff);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
@@ -49,18 +59,21 @@
 .navbar-container .nav-list li a {
     text-decoration: none;
     font-size: 1rem;
-    /* font-weight: 500; */
-    color: #333; /* Gunakan warna yang lebih lembut */
+    color: #333;
     padding: 0.4rem 1.2rem;
-    border-radius: 8px; /* Tambahkan sudut yang membulat agar terlihat lebih halus */
+    border-radius: 8px;
     transition: all 0.3s ease-in-out;
 }
 
 .navbar-container .nav-list li:hover a {
-    /* text-decoration: underline; */
-    /* text-decoration-color: #ff6b6b; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-list li.active a {
+    /* background-color: #e3e3e3; */
+    color: #232946;
+    font-weight: bold;
 }
 
 
@@ -72,21 +85,14 @@ body {
     flex-direction: column;
     scroll-behavior: smooth;
     color: #232946;
-   
+
+    background: linear-gradient(120deg, #ffccf9, #fccb90, #c4e0e5, #fae3d9);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite;
 
 }
 
-
-
-/* .background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-} */
-.sweet-word{
+.sweet-word {
     text-align: center;
     font-family: "Lora", serif;
     width: 80%;
@@ -95,163 +101,123 @@ body {
 }
 
 
-.creativity{
+.creativity {
     font-family: "Edu AU VIC WA NT Guides", cursive;
 
 }
-.sweet-word-long{
+
+.sweet-word-long {
     font-family: "Quicksand", sans-serif;
     color: #333333;
     opacity: .7;
 
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Item */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    margin: auto;
+    /* gap: 2em; */
+    padding: 2em;
+
+    /* background-color: #232946; */
+}
+
+.grid-item {
+    width: 100%;
+    padding: 1em;
+    /* overflow: hidden; */
+
+}
+
+
+
+
+.card {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 300px;
+    display: flex;
+}
+
+.card-content {
+    padding: 20px;
+    width: 60%;
+    /* Mengatur lebar bagian konten */
+}
+
+.title {
+    color: #232946;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #617d98;
+    font-size: 14px;
+}
+
+.card-image {
+    width: 40%;
+    /* Mengatur lebar bagian gambar */
+    object-fit: contain;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-image:hover {
+    transform: scale(1.1);
+
+}
+
+.card-image img {
     width: 100%;
     height: 100%;
-    background: radial-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+    object-fit: contain;
+    /* Untuk memastikan gambar menutupi seluruh area */
 }
+
+.card-image img :hover {
+    transform: scale(1.1);
+    /* background-color: #333333; */
+    /* object-fit: contain; */
+}
+
+.image-portfolio{
+    width: 100%;
+}
+
+/* ANIMATION */
 
 @keyframes gradientAnimation {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
 }
+
 /* background: linear-gradient(120deg, #f7d2c4, #f2c464, #e9c46a, #e4d6f5, #c7b8ea, #a8d7f5, #87ceeb);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite; */
-.portfolio {
-    margin-top: 1rem;
-    padding: 1rem 8rem;
-    /* background-color: #00ebc7; */
-    /* background-color: #fffffe; */
-    /* height: 100%; */
-
-   
-
-
-    .design {
-        .android-layout {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            
-            .portfolio-section-1 {
-                display: flex;
-                flex-direction: column;
-                justify-content: start;
-
-                .tech-used{
-                    font-size: 14px;
-                    color: #ff5470;
-                    text-align: left;
-                }
-
-                .foto-portfolio img {
-                    width: 100%;
-                    object-fit: cover;
-                    transition: transform 0.3s ease-in-out;
-                }
-    
-                .foto-portfolio:hover img {
-                    transform: scale(1.1);
-                }
-                .project-info {
-                    .project-name {
-                        margin-top: 1em;
-                        font-size: 20px;
-                    }
-
-                    .project-name a {
-                        text-decoration: none;
-                        color: #FFEB55;
-                    }
-
-                    .project-name a:hover {
-                        color: #b9a71b;
-                    }
-
-                    .project-name a :visited {
-                        color: #00ebc7;
-                    }
-
-                    .project-description {
-                        font-size: 14px;
-                        opacity: 80%;
-                        text-align: justify;
-                    }
-                }
-
-            }
-            .grid-item {
-                /* border: 3px solid #ddd; */
-                padding: 20px;
-                text-align: center;
-                background-color: rgba(0, 0, 0, 5%);
-                height: max-content;
-                img{
-                    width: 100%;
-                }
-              }
-
-              /* .grid-item:nth-child(odd){
-                margin-top: 2rem;
-              } */
-        }
-
-        
-
-        .design-layout {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            .grid-item {
-                border: 1px solid #ddd;
-                padding: 20px;
-                text-align: center;
-                height: max-content;
-                img{
-                    width: 100%;
-                }
-                
-              }
-
-              .grid-item:nth-child(even){
-                margin-top: 2rem;
-              }
-        }
-
-        .video-layout{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-
-            /* boiler plate */
-            .grid-item {
-                border: 1px solid #ddd;
-                padding: 20px;
-                text-align: center;
-                height: max-content;
-                img{
-                    width: 100%;
-                }
-              }
-        }
-    }
-}
 
 
 @media screen and (max-width: 768px) {
-    .portfolio{
+    /* .portfolio{
         padding: 1em;
     }
     .portfolio .design {
@@ -266,6 +232,5 @@ body {
         }
 
         
-    }
-  }
-
+    } */
+}
