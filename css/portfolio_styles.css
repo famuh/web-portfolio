@@ -32,11 +32,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* padding-block: .5rem; */
     z-index: 999;
     max-width: max-content;
     border-radius: 20px;
-    /* background-color: #ffffff;  */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background: linear-gradient(120deg, #ff99cc, #ffccff, #ccccff, #99ccff, #66ccff, #ccccff, #ffccff);
     background-size: 400% 400%;
@@ -44,15 +42,11 @@
 
     .nav-list ul {
         padding: 0 1em;
-        /* padding-left: 0; */
         display: flex;
         justify-content: center;
         gap: 2rem 1rem;
         list-style-type: none;
-
     }
-
-
 }
 
 
@@ -71,7 +65,6 @@
 }
 
 .nav-list li.active a {
-    /* background-color: #e3e3e3; */
     color: #232946;
     font-weight: bold;
 }
@@ -120,7 +113,8 @@ body {
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    max-width: 1200px; /* Menentukan lebar maksimum untuk tata letak lebih rapi */
+    max-width: 1200px;
+    /* Menentukan lebar maksimum untuk tata letak lebih rapi */
 
     width: 100%;
     margin: 0 auto;
@@ -132,8 +126,8 @@ body {
 .grid-item {
     /* width: 100%;
     /* padding: 1em;  */
-padding: 1em;
-   
+    padding: 1em;
+
 }
 
 
@@ -186,8 +180,12 @@ padding: 1em;
     transform: scale(1.1);
 }
 
-.image-portfolio{
+.image-portfolio {
     width: 100%;
+}
+
+.video-item{
+    margin: 0 auto;
 }
 
 /* ANIMATION */
@@ -208,25 +206,39 @@ padding: 1em;
 
 
 
-  
-    /* Mobile */
+
+/* Mobile */
 @media screen and (max-width: 768px) {
+
+    .image-portfolio {
+        height: 80%;
+        /* display: block; */
+    }
+
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
-    .grid-item{
+
+    .grid-item {
         display: flex;
         justify-content: center;
     }
+
+   
+
+    
 }
 
 /* Tablet */
 @media (min-width: 769px) and (max-width: 1024px) {
+    
+    
     .portfolio-grid {
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
     }
-    .grid-item{
+
+    .grid-item {
         display: flex;
         justify-content: center;
     }
@@ -237,6 +249,7 @@ padding: 1em;
     .portfolio-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+   
 }
 
 /* Large Desktop */
@@ -244,4 +257,5 @@ padding: 1em;
     .portfolio-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+  
 }

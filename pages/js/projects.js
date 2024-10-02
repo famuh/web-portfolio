@@ -2,7 +2,8 @@ const projects = {
   android: [
     {
       name: "Al-Qur'an",
-      description: "Alquran App adalah aplikasi yang memudahkan membaca dan memahami Al-Qur'an, lengkap dengan terjemahan, tafsir, dan fitur pencarian.",
+      description:
+        "Alquran App adalah aplikasi yang memudahkan membaca dan memahami Al-Qur'an, lengkap dengan terjemahan, tafsir, dan fitur pencarian.",
       tech: "Flutter, GetX, Theme Persistent",
       image: "../img/porto/alquranapp.png",
       link: "#",
@@ -145,18 +146,23 @@ function renderProjects(containerId, projectList, isVideo = false) {
   projectList.forEach((project) => {
     let item = document.createElement("div");
     item.classList.add("grid-item");
+
+    let itemVideo = document.createElement("div");
+    itemVideo.classList.add("video-item");
+
     if (isVideo) {
-      item.innerHTML = `
-                  
+      itemVideo.innerHTML = `   
+
                 <iframe width="320" height="240" src="${project.link}" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div class="card">
-                  <div class="video-information">
+                <div class="card" style="margin-top:1em; margin-bottom:2em">
+                  <div class="video-information" style="padding:0 1em;">
                     <p>${project.title}</p>
                     <p>${project.description}</p>
                    </div>
-                  </div>   
+                  </div>
                 
                     `;
+      
     } else if (typeof project === "object") {
       item.innerHTML = `
             <div class="card">
@@ -174,9 +180,21 @@ function renderProjects(containerId, projectList, isVideo = false) {
       <a href="${project}" target="_self"><img src="${project}" alt="" srcset="" class="image-portfolio"></a>
       `;
     }
-    container.appendChild(item);
+
+    if (isVideo) {
+      container.appendChild(itemVideo);
+      
+    }else{
+      container.appendChild(item);
+
+    }
   });
 }
+
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
   // Render default projects (Mobile)
