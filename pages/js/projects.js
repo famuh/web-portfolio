@@ -2,7 +2,7 @@ const projects = {
   android: [
     {
       name: "Al-Qur'an",
-      description: "",
+      description: "Alquran App adalah aplikasi yang memudahkan membaca dan memahami Al-Qur'an, lengkap dengan terjemahan, tafsir, dan fitur pencarian.",
       tech: "Flutter, GetX, Theme Persistent",
       image: "../img/porto/alquranapp.png",
       link: "#",
@@ -10,7 +10,7 @@ const projects = {
     {
       name: "Absence",
       description:
-        "An application to perform employee attendance by applying geofencing and camera media...",
+        "An application to perform employee attendance by applying geofencing and camera media",
       tech: "Flutter, Provider, Google Maps API, Camera, Local Storage, Node.Js, Mongo.db, Figma",
       image: "../img/absence-preview.png",
       link: "#",
@@ -28,7 +28,7 @@ const projects = {
       description:
         "Movies App provides information to users regarding movies that are currently showing, will be showing and top rated movies. Click on an item to view detailed information of the movie. Users can search for movies through the search menu.",
       tech: "Flutter, Provider & BloC, Clean Architecture, CI/CD, Dependency Injection, Firebase Crashlytics",
-      image: "../img/none-image-preview.png",
+      image: "../img/watch-prev.png",
       link: "#",
     },
     {
