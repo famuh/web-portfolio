@@ -173,13 +173,6 @@ const experienceList = [
 
 ]
 
-const experienceColorList=[
-  "#229799",
-  "#FFBE98",
-  "#78B7D0",
-  "#D7C3F1",
-  "#FF8C9E"
-]
 
 function renderExperienceItem(item) {
   const experience = document.getElementById("experience-cards");
@@ -188,8 +181,6 @@ function renderExperienceItem(item) {
 
   // warna
   expItem.style.backgroundColor = "#B4D4FF";
-
-  
 
   if (item.isList) {
     expItem.innerHTML = `
