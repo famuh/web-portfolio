@@ -2,8 +2,9 @@ const projects = {
   android: [
     {
       name: "Angkutin",
-      description:"Angkutin is an app designed to facilitate coordination between communities and cleaners in waste management. The app provides features such as daily waste collection notifications, waste transportation requests, and reporting of illegal waste piles, as well as monitoring the status of ongoing services. Angkutin helps the community interact efficiently with the cleaners without the need for direct communication, eases the transportation process, and ensures the environment remains clean. The app has two main roles: the community and the cleaners, with customized features for each to ensure efficient waste management.",
-      tech: "Flutter, GetX, Theme Persistent",
+      description:
+        "Angkutin is an app designed to facilitate coordination between communities and cleaners in waste management. <br><br>The app provides features such as daily waste collection notifications, waste transportation requests, and reporting of illegal waste piles, as well as monitoring the status of ongoing services. Angkutin helps the community interact efficiently with the cleaners without the need for direct communication, eases the transportation process, and ensures the environment remains clean. <br><br>The app has two main roles: the community and the cleaners, with customized features for each to ensure efficient waste management.",
+      tech: "Flutter, Firebase, Google Maps API, Open Route Service API, Figma, Kanban Method",
       image: "../img/angkutin-prev.png",
       link: "#",
       techStack: [
@@ -103,6 +104,18 @@ const projects = {
   ],
   website: [
     {
+      name: "Personal Web Portfolio",
+      description: "",
+      tech: "HTML, CSS, Javascript",
+      image: "../img/portfolio-prev.png",
+      link: "https://github.com/famuh/Covid-19-World-Tracker",
+      techStack: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+      ],
+    },
+    {
       name: "Covid-19 World Tracker",
       description:
         "A website that helps users to find out Covid-19 disease data from abroad...",
@@ -110,7 +123,10 @@ const projects = {
       image: "../img/web-covid-preview.png",
       link: "https://github.com/famuh/Covid-19-World-Tracker",
       techStack: [
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
       ],
     },
     {
@@ -121,7 +137,8 @@ const projects = {
       image: "../img/web-flashmarket-preview.png",
       link: "#",
       techStack: [
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
       ],
     },
     // Add more projects here
@@ -210,11 +227,18 @@ function renderProjects(containerId, projectList, isVideo = false) {
                       <h2 class="title">${project.name}</h2>
                       <p class="description" id="description">${project.description}</p>
                       <p class="more-btn" id="more-btn">see more &#128640;</p>
+
                       <!-- Dialog for showing full content -->
                       <dialog class="dialog">
-                <p class="dialog-content">${project.description}</p>
-                <button class="closeDialog-btn">Ok, I See</button>
-            </dialog>
+                      
+                          <h3>${project.name}</h3>
+                          
+                          <div class="dialog-tech">
+                            <h4>Made with ${project.tech}</h4>
+                          </div>
+                          <p class="dialog-content">${project.description}</p>
+                        <button class="closeDialog-btn">Ok, I See &#128077;</button>
+                      </dialog>
                     </div>
                     <div class="card-image">
                     <a href="${project.image}" target="_self"><img src="${project.image}" alt="${project.name}"></a>
@@ -291,18 +315,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const dialogContainer = document.body; // Menggunakan body untuk event delegation
 
   dialogContainer.addEventListener("click", (event) => {
-      const target = event.target;
+    const target = event.target;
 
-      // Show the dialog when "see more" is clicked
-      if (target.classList.contains("more-btn")) {
-          const dialog = target.closest(".card").querySelector(".dialog");
-          dialog.showModal();
-      }
+    // Show the dialog when "see more" is clicked
+    if (target.classList.contains("more-btn")) {
+      const dialog = target.closest(".card").querySelector(".dialog");
+      dialog.showModal();
+    }
 
-      // Close the dialog when close button is clicked
-      if (target.classList.contains("closeDialog-btn")) {
-          const dialog = target.closest(".dialog");
-          dialog.close();
-      }
+    // Close the dialog when close button is clicked
+    if (target.classList.contains("closeDialog-btn")) {
+      const dialog = target.closest(".dialog");
+      dialog.close();
+    }
   });
 });
