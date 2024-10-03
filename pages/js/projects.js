@@ -1,20 +1,36 @@
 const projects = {
   android: [
     {
+      name: "Angkutin",
+      description:"Angkutin is an app designed to facilitate coordination between communities and cleaners in waste management. The app provides features such as daily waste collection notifications, waste transportation requests, and reporting of illegal waste piles, as well as monitoring the status of ongoing services. Angkutin helps the community interact efficiently with the cleaners without the need for direct communication, eases the transportation process, and ensures the environment remains clean. The app has two main roles: the community and the cleaners, with customized features for each to ensure efficient waste management.",
+      tech: "Flutter, GetX, Theme Persistent",
+      image: "../img/angkutin-prev.png",
+      link: "#",
+      techStack: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+      ],
+    },
+    {
       name: "Al-Qur'an",
       description:
         "Alquran App adalah aplikasi yang memudahkan membaca dan memahami Al-Qur'an, lengkap dengan terjemahan, tafsir, dan fitur pencarian.",
       tech: "Flutter, GetX, Theme Persistent",
       image: "../img/porto/alquranapp.png",
       link: "#",
+      techStack: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+      ],
     },
     {
       name: "Absence",
       description:
-        "An application to perform employee attendance by applying geofencing and camera media",
+        "An application to perform employee attendance by applying geofencing and camera media, consist of Employee and Admin user  ",
       tech: "Flutter, Provider, Google Maps API, Camera, Local Storage, Node.Js, Mongo.db, Figma",
       image: "../img/absence-preview.png",
       link: "#",
+      techStack: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+      ],
     },
     {
       name: "Diatrofi",
@@ -23,6 +39,9 @@ const projects = {
       tech: "Flutter, Provider, Web View, Figma",
       image: "../img/diatrofi-preview.png",
       link: "https://github.com/famuh/diatrofi-healthcare",
+      techStack: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+      ],
     },
     {
       name: "Movies App",
@@ -31,6 +50,9 @@ const projects = {
       tech: "Flutter, Provider & BloC, Clean Architecture, CI/CD, Dependency Injection, Firebase Crashlytics",
       image: "../img/watch-prev.png",
       link: "#",
+      techStack: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+      ],
     },
     {
       name: "News App",
@@ -39,6 +61,9 @@ const projects = {
       tech: "Flutter, Provider",
       image: "../img/none-image-preview.png",
       link: "#",
+      techStack: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+      ],
     },
     {
       name: "Swalokal",
@@ -47,6 +72,9 @@ const projects = {
       tech: "Kotlin, XML, FastApi, Python, Flask, TensorFlow, Figma",
       image: "../img/swalokal-prev.png",
       link: "#",
+      techStack: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+      ],
     },
     {
       name: "Story App",
@@ -55,6 +83,9 @@ const projects = {
       tech: "Kotlin, XML, Google Maps API, Camera",
       image: "../img/none-image-preview.png",
       link: "#",
+      techStack: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+      ],
     },
     {
       name: "GitHub User App",
@@ -63,6 +94,9 @@ const projects = {
       tech: "Flutter, Provider",
       image: "../img/none-image-preview.png",
       link: "#",
+      techStack: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+      ],
     },
 
     // Add more projects here
@@ -162,19 +196,34 @@ function renderProjects(containerId, projectList, isVideo = false) {
                   </div>
                 
                     `;
-      
     } else if (typeof project === "object") {
       item.innerHTML = `
             <div class="card">
                     <div class="card-content">
+                    <ul class="project-tech"></ul>
                       <h2 class="title">${project.name}</h2>
-                      <p class="description">${project.description}</p> 
+                      <p class="description" id="description">${project.description}</p>
+                      <p class="more-btn" id="more-btn">see more &#128640;</p>
+                      <!-- Dialog for showing full content -->
+                      <dialog id="dialog">
+                          <p class="dialog-content">${project.description}</p>
+                          <button id="closeDialog" class="closeDialog-btn">Ok, I See</button>
+                      </dialog>
                     </div>
                     <div class="card-image">
                     <a href="${project.image}" target="_self"><img src="${project.image}" alt="${project.name}"></a>
                     </div>
             </div>
                     `;
+
+      const ulElement = item.querySelector(".project-tech");
+      if (project.techStack) {
+        project.techStack.forEach((point) => {
+          const li = document.createElement("li");
+          li.innerHTML = `<img src="${point}" alt="tech stack" class="tech-icon">`; // Misalnya, menggunakan gambar
+          ulElement.appendChild(li);
+        });
+      }
     } else {
       item.innerHTML = `
       <a href="${project}" target="_self"><img src="${project}" alt="" srcset="" class="image-portfolio"></a>
@@ -183,18 +232,11 @@ function renderProjects(containerId, projectList, isVideo = false) {
 
     if (isVideo) {
       container.appendChild(itemVideo);
-      
-    }else{
+    } else {
       container.appendChild(item);
-
     }
   });
 }
-
-
-
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
   // Render default projects (Mobile)
@@ -202,6 +244,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Get menu items
   const menuItems = document.querySelectorAll(".nav-list li");
+  menuItems[0].classList.add("active");
 
   // Add click event listeners for each menu item
   menuItems.forEach((item) => {
@@ -235,5 +278,25 @@ document.addEventListener("DOMContentLoaded", () => {
           break;
       }
     });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach((card) => {
+      const description = card.querySelector(".more-btn");
+      const dialog = card.querySelector("#dialog");
+      const closeDialog = card.querySelector("#closeDialog");
+
+      // Show the dialog when description is clicked
+      description.addEventListener("click", () => {
+          dialog.showModal();
+      });
+
+      // Close the dialog when close button is clicked
+      closeDialog.addEventListener("click", () => {
+          dialog.close();
+      });
   });
 });

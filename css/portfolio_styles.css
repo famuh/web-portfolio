@@ -55,6 +55,9 @@
 .nav-list li.active a {
     color: #232946;
     font-weight: bold;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -115,7 +118,7 @@ body {
 }
 
 .card-content {
-    padding: 20px;
+    padding: 20px 0 20px 20px;
     width: 60%;
 }
 
@@ -127,7 +130,38 @@ body {
 .description {
     color: #617d98;
     font-size: 14px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    cursor: pointer;
 }
+.more-btn,.closeDialog-btn{
+    cursor: pointer;
+    font-size: 14px;
+color: #232946;
+font-weight: 700;
+}
+
+.closeDialog-btn{
+    border: none;
+    background-color: transparent;
+    padding: 1em;
+}
+dialog {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+}
+
+.dialog-content {
+    margin-bottom: 15px;
+}
+
+
 
 .card-image {
     width: 40%;
@@ -156,6 +190,19 @@ body {
 
 .video-item{
     margin: 0 auto;
+}
+
+.project-tech{
+    display: flex;
+    list-style: none;
+    /* background-color: #232946; */
+    padding: 0;
+    margin: 0;
+}
+
+
+.tech-icon{
+    width: 20px;
 }
 
 /* ANIMATION */
