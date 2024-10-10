@@ -61,9 +61,11 @@ header .logo {
 .text-bold {
     font-weight: 600;
 }
-
-.overview {
+.overview-warp{
     height: 100vh;
+}
+.overview {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -281,6 +283,8 @@ header .logo {
 
 .experience-section-sub {
     color: #ff5470;
+    text-align: center;
+    width: 70vw;
 }
 
 .experience-info-wrapper {
@@ -435,8 +439,8 @@ header .logo {
 
 .reachme{
     height: 100%;
-    background-color: #333;
-    color: white;
+    background-color: #10375C;
+    color: #F8EDED;
 
 }
 
@@ -460,17 +464,12 @@ header .logo {
     color: #00ebc7;
     /* margin: 0 .5em; */
 }
-
-/* .made-with {
-    padding: 1em 0;
-    background-color: #00214d;
-    color: #fffffe;
-
-    .made-with-love {
-        text-align: center;
-        opacity: 70%;
-    }
-} */
+.contact li  a:hover {
+    padding: 0 .5em;
+    text-decoration: none;
+    color: #00ebc7;
+    /* margin: 0 .5em; */
+}
 
 /* Animation */
 
