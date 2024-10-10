@@ -3,12 +3,14 @@ const projects = {
     {
       name: "Angkutin",
       description:
-        "Angkutin is an app designed to facilitate coordination between communities and cleaners in waste management. <br><br>The app provides features such as daily waste collection notifications, waste transportation requests, and reporting of illegal waste piles, as well as monitoring the status of ongoing services. Angkutin helps the community interact efficiently with the cleaners without the need for direct communication, eases the transportation process, and ensures the environment remains clean. <br><br>The app has two main roles: the community and the cleaners, with customized features for each to ensure efficient waste management.",
+        "Angkutin is an app designed to facilitate coordination between communities and cleaners in waste management. <br><br>The app provides features such as daily waste collection notifications, waste transportation requests, and reporting of illegal waste piles, as well as monitoring the status of ongoing services. Angkutin helps the community interact efficiently with the cleaners without the need for direct communication, eases the transportation process, and ensures the environment remains clean. <br><br>The app has three main roles: the community, the cleaners, and admin, with customized features for each to ensure efficient waste management.",
       tech: "Flutter, Firebase, Google Maps API, Open Route Service API, Figma, Kanban Method",
       image: "../img/angkutin-prev.png",
-      link: "#",
+      link: "https://github.com/angkutin/angkutin",
       techStack: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
+        
       ],
     },
     {
@@ -17,9 +19,10 @@ const projects = {
         "Alquran App adalah aplikasi yang memudahkan membaca dan memahami Al-Qur'an, lengkap dengan terjemahan, tafsir, dan fitur pencarian.",
       tech: "Flutter, GetX, Theme Persistent",
       image: "../img/porto/alquranapp.png",
-      link: "#",
+      link: "https://github.com/famuh/al-qur-an-app",
       techStack: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+
       ],
     },
     {
@@ -53,6 +56,8 @@ const projects = {
       link: "#",
       techStack: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
+
       ],
     },
     {
@@ -97,6 +102,7 @@ const projects = {
       link: "#",
       techStack: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
       ],
     },
 
@@ -113,6 +119,20 @@ const projects = {
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+      ],
+    },
+    {
+      name: "Simple CRUD React-Express",
+      description: "Aplikasi ini merupakan proyek belajar untuk membangun aplikasi fullstack CRUD USER sederhana menggunakan ReactJS di frontend dan ExpressJS di backend. Akses source code di branch Master. Fiturnya ialah CRUD (Create, Read, Update, Delete) user sederhana",
+      tech: "ExpressJs, ReactJs, ReactRouterDom, BulmaCss, Axios, MySQL",
+      image: "../img/portfolio-prev.png",
+      link: "https://github.com/famuh/crud-react-express",
+      techStack: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bulma/bulma-plain.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
       ],
     },
     {
@@ -268,6 +288,7 @@ function renderProjects(containerId, projectList, isVideo = false) {
   });
 }
 
+// show items based on menu choosen
 document.addEventListener("DOMContentLoaded", () => {
   // Render default projects (Mobile)
   renderProjects("portfolioContainer", projects.android);
@@ -311,6 +332,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// dialog event when click detail
 document.addEventListener("DOMContentLoaded", () => {
   const dialogContainer = document.body; // Menggunakan body untuk event delegation
 

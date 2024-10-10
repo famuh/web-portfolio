@@ -137,28 +137,64 @@ body {
     text-overflow: ellipsis;
     cursor: pointer;
 }
-.more-btn,.closeDialog-btn{
+
+.more-btn,
+.closeDialog-btn {
     cursor: pointer;
     font-size: 14px;
-color: #232946;
-font-weight: 700;
+    color: #232946;
+    font-weight: 700;
 }
 
-.closeDialog-btn{
+.closeDialog-btn {
     border: none;
     background-color: transparent;
     padding: 1em;
 }
+
 dialog {
     border: none;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    max-width: 400px;
+    background: linear-gradient(135deg, #f3e7e9, #e3f2fd, #d1e7dd, #f9f7e8);
+    animation: softGradient 15s ease infinite;
+    /* background-size: 300% 300%; */
+    max-width: 70%;
+
+
+}
+
+@keyframes softGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .dialog-content {
     margin-bottom: 15px;
+    /* animation: fadeIn 3s ease-in-out; */
+
 }
 
 
@@ -188,20 +224,24 @@ dialog {
     width: 100%;
 }
 
-.video-item{
+.video-item {
     margin: 0 auto;
 }
 
-.project-tech{
+.project-tech {
     display: flex;
     list-style: none;
     /* background-color: #232946; */
     padding: 0;
     margin: 0;
 }
+.project-tech li{
+    
+    margin-right: 10px;
+}
 
 
-.tech-icon{
+.tech-icon {
     width: 20px;
 }
 
@@ -239,7 +279,7 @@ dialog {
 
 /* Tablet */
 @media (min-width: 769px) and (max-width: 1024px) {
-    
+
     .portfolio-grid {
         width: 100%;
         grid-template-columns: repeat(2, 1fr);

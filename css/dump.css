@@ -246,3 +246,20 @@
         }
     }
 }
+
+
+
+/* DARK GRADIENT */
+/* max-width: 400px;
+    background: linear-gradient(135deg, #000428, #004e92, #3b0089, #0f2027);
+    background-size: 400% 400%;
+    animation: gradientAnimation 12s ease infinite;
+    overflow: hidden; */
+
+    /* @keyframes gradientAnimation {
+        0% { background-position: 0% 50%; }
+        25% { background-position: 50% 100%; }
+        50% { background-position: 100% 50%; }
+        75% { background-position: 50% 0%; }
+        100% { background-position: 0% 50%; }
+    } */
