@@ -165,6 +165,7 @@ const projects = {
   ],
 
   graphicDesign: [
+    "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fimage%2Fdiabetes-Recovered1.jpg?alt=media&token=177a0da9-8c29-4893-a7ce-075c097e0d72",
     "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fimage%2FBrosur%20FAIS%20ke%207.jpg?alt=media&token=03fa3bf9-8ce1-47b1-b04a-86bc5fed4269",
     "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fimage%2Fbrosur%20alpha.jpg?alt=media&token=47dc14a5-1a6a-4ab1-a046-ac6dcb4989ff",
     "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fimage%2Fnetworking%20and%20security%20arc.jpg?alt=media&token=e81374de-fc3d-40d9-9c69-45ded4fa2df0",
