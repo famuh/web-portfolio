@@ -126,12 +126,25 @@ hardskillList.forEach((element) => {
 
 // experience
 const experienceList = [
+  {
+    title: "Flutter Developer",
+    location: "PT. Damai Nusa Abadi",
+    description: "DNA Group is a business group that has business units spread across various major cities in Indonesia. Its business units include hotels, entertainment, food & beverages, and start-up.",
+    date: "Okt 24 - Now",
+    img: "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fexperience%2Ficon_app4.png?alt=media&token=b4fb9c2e-79c8-4862-8554-449ab60c792e",
+    isList : true,
+    jobList : [
+      "Develop Point of Sale (POS) application for KiosK device",
+      "Collaborate with the team to ensure smooth integration and fulfill the stakeholder needs",
+      "Implement and optimize the user interface (UI) based on the wireframes provided, and make improvisations to improve the user experience.",
+    ]
+  },
   
   {
     title: "UI Designer & Mobile Developer",
     location: "Freelance",
     description: "Collaborate with teams and clients in solving problems faced by clients to design or build applications for the benefit of individuals, groups, or companies.",
-    date: "Nov 23 - Jul 24",
+    date: "Nov 23 - Now",
     img: "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fexperience%2FGroup%201.png?alt=media&token=ad410711-567d-4b0f-9bc2-8bd30407b932",
     isList : false,
     jobList : [
