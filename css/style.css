@@ -66,7 +66,7 @@ body {
 }
 .overview-wrap{
     /* flex: 1; */
-    /* height: 100vh; */
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -134,7 +134,7 @@ body {
     justify-content: center;
     /* right: auto; */
     /* top: 1em; */
-    background-color: #00ebc7;
+    /* background-color: #00ebc7; */
     /* border: 2px solid black; */
     animation: rotateInfinite 2s linear infinite;
     font-size: 24px;
@@ -174,6 +174,99 @@ body {
     background-size: 300% 300%;
 
 }
+
+.working-on {
+  padding: 4rem 1rem;
+  background: #f9f9f9;
+}
+
+.working-on-wrap {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.glass-circle {
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.working-on-wrap h1 {
+  font-size: 2rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.working-on-wrap p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #555;
+}
+
+.working-on-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+  gap: 2rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.working-on-description {
+  flex: 1;
+  text-align: left;
+}
+
+.working-on-description h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.working-on-description p {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.working-on-image img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 20px;
+  opacity: 0;
+  animation: fadeInAndSlide 1s ease-in forwards;
+  animation-delay: 0.3s;
+  transform: translateX(20px);
+}
+
+/* Animation */
+@keyframes fadeInAndSlide {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .working-on-item,
+  .working-on-item.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .working-on-description {
+    text-align: center;
+  }
+}
+
 
 @keyframes gradientAnimation {
     0% {
@@ -261,6 +354,19 @@ body {
     font-size: 16px;
     color: #5F5D9C;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+    font-family: "Quicksand", sans-serif;
+    border: none;
+}
+
+.btn-portfolio-second {
+    background: none;
+    /* border: none; */
+    padding: 10px 20px;
+    font-size: 16px;
+   color: #F8FAE5;
+    background-color: #5F5D9C;    cursor: pointer;
     transition: all 0.3s ease-in-out;
     font-weight: 600;
     font-family: "Quicksand", sans-serif;
@@ -548,6 +654,11 @@ body {
         margin-top: 0px;
     }
 
+    .overview-wrap{
+    /* flex: 1; */
+    /* height: 100%; */
+    height: 100%;
+}
 
 
 

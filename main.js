@@ -88,7 +88,7 @@ const hardskillList = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
   },
   {
-    name: "VS Code",
+    name: "VSCode",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
   },
@@ -97,19 +97,25 @@ const hardskillList = [
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg",
   },
-  {
-    name: "Photoshop",
+    {
+    name: "Trello",
     image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-plain-wordmark.svg",
   },
+      {
+    name: "Click Up",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fimage%2FClickUp-removebg-preview.png?alt=media&token=ce08f455-4b9e-436d-ac22-f7747ba7f556",
+  },
+  // {
+  //   name: "Photoshop",
+  //   image:
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg",
+  // },
   {
     name: "Canva",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg",
-  },
-  {
-    name: "Capcut",
-    image:"https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fimage%2Funnamed.png?alt=media&token=b87dfa24-47f0-49e6-a587-f2c4dbd29ee3"
   },
 ];
 
@@ -124,6 +130,7 @@ hardskillList.forEach((element) => {
 });
 
 
+
 // experience
 const experienceList = [
   {
@@ -134,7 +141,7 @@ const experienceList = [
     img: "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fexperience%2Ficon_app4.png?alt=media&token=b4fb9c2e-79c8-4862-8554-449ab60c792e",
     isList : true,
     jobList : [
-      "Develop Point of Sale (POS) application for KiosK device",
+      "Develop Self Ordering System for tablet device",
       "Collaborate with the team to ensure smooth integration and fulfill the stakeholder needs",
       "Implement and optimize the user interface (UI) based on the wireframes provided, and make improvisations to improve the user experience.",
     ]
@@ -144,7 +151,7 @@ const experienceList = [
     title: "UI Designer & Mobile Developer",
     location: "Freelance",
     description: "Collaborate with teams and clients in solving problems faced by clients to design or build applications for the benefit of individuals, groups, or companies.",
-    date: "Nov 23 - Now",
+    date: "Nov 23 - Jul 25",
     img: "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fexperience%2FGroup%201.png?alt=media&token=ad410711-567d-4b0f-9bc2-8bd30407b932",
     isList : false,
     jobList : [
