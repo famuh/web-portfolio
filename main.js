@@ -40,6 +40,39 @@
 
 // })
 
+// cursor
+const cursor = document.querySelector('.cursor');
+const circles = document.querySelectorAll('.circle');
+const speeds = [0.05, 0.1, 0.25]; // smooth follow
+
+let mouseX = 0, mouseY = 0;
+let posX = [0, 0, 0], posY = [0, 0, 0];
+
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+function animate() {
+  circles.forEach((circle, i) => {
+    posX[i] += (mouseX - posX[i]) * speeds[i];
+    posY[i] += (mouseY - posY[i]) * speeds[i];
+    circle.style.left = posX[i] + 'px';
+    circle.style.top = posY[i] + 'px';
+  });
+
+  document.querySelector('.circle-border').style.left = mouseX + 'px';
+  document.querySelector('.circle-border').style.top = mouseY + 'px';
+
+  requestAnimationFrame(animate);
+}
+animate();
+
+// Hover event
+const btn = document.querySelector('.btn-portfolio');
+btn.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+btn.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+
 // hardskill
 const hardskillList = [
   {

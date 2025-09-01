@@ -15,11 +15,84 @@ body {
     display: flex;
     flex-direction: column;
     scroll-behavior: smooth;
-
-
-
 }
 
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  /* mix-blend-mode: difference; */
+  z-index: 9999;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+/* background: #ffe6e6; */
+}
+
+.circle-1 {
+  width: 30px;
+  height: 30px;
+  /* opacity: 0.2; */
+ border: 2px solid #00e5ff;
+}
+
+
+.circle-2 {
+  width: 15px;
+  height: 15px;
+  opacity: 0.5;
+  background: #00e5ff;
+}
+
+
+.circle-3 {
+  width: 5px;
+  height: 5px;
+  /* opacity: 1; */
+   background: #00e5ff;
+}
+
+/* Lingkaran border kecil */
+.circle-border {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #00e5ff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Saat hover, hanya lingkaran besar + border kecil yang tampil */
+.cursor.hover .circle-1 {
+  width: 60px;
+  height: 60px;
+  opacity: 0.3;
+  background: #00e5ff;
+  border: none;
+}
+
+.cursor.hover .circle-border {
+  /* width: 60px;
+  height: 60px;
+  opacity: 0.3;
+  background: #00e5ff; */
+  border: none;
+}
+
+.cursor.hover .circle-2,
+.cursor.hover .circle-3 {
+  opacity: 0;
+}
+
+.cursor.hover .circle-border {
+  opacity: 1;
+}
 
 
 
