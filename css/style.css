@@ -275,7 +275,7 @@ body {
 .skills-overview {
     overflow: hidden;
     width: 100%;
-    rotate: -1deg;
+    rotate: 2deg;
 }
 
 .softskill-wrapper {
@@ -450,6 +450,16 @@ body {
 
     to {
         transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-right {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
     }
 }
 
@@ -724,6 +734,41 @@ body {
     background-color: #5F5D9C;
 }
 
+.rocket-running {
+    /* z-index: -1; */
+    overflow: hidden;
+    /* width: 100vw; */
+    rotate: -5deg;
+
+    .rocket-running_wrapper {
+        display: flex;
+        white-space: nowrap;
+        background-color: rgba(223, 153, 255, 0.2);
+
+        .rocket-list {
+            display: flex;
+            gap: 10rem;
+            list-style: none;
+            /* padding: 1em; */
+            margin: 0;
+            font-weight: 600;
+            color: #00214d;
+            animation: scroll-right 15s linear infinite;
+
+            .rocket-list_first{
+                margin-left: 10rem;
+            }
+
+        }
+
+        .rocket-list img {
+            width: 48px;
+            height: 48px;
+            rotate: 90deg;
+        }
+    }
+}
+
 .quote {
     /* padding: 0px 4em; */
     display: flex;
@@ -740,7 +785,8 @@ body {
     border-radius: 20px;
 
     .quote_rocket-lottie {
-        scale: 1;
+        /* scale: 1; */
+        aspect-ratio: 1/1;
     }
 }
 
@@ -799,13 +845,23 @@ body {
         .contact-item_content {
             font-size: 24px;
             color: white;
-            overflow: hidden;
+            /* overflow: hidden; */
+            /* white-space: normal; izinkan teks pindah baris */
+            /* word-wrap: break-word; kalau kata panjang, boleh dipotong */
+            overflow-wrap: anywhere;
+            /*modern replacement */
         }
     }
+
+    /* .contact-item_content{
+        max-lines: 4;
+        overflow: hidden;
+    } */
 
     .contact-item-first {
         max-width: max-content;
         rotate: -5deg;
+        /* max-lines: 1; */
     }
 
     .contact-item-second {
@@ -860,28 +916,6 @@ body {
     /* font-size: 48px; */
 }
 
-/* Contact */
-.contact {
-    padding: 2rem;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    list-style: none;
-}
-
-.contact li a {
-    padding: 0 .5em;
-    text-decoration: none;
-    color: #00214d;
-    /* margin: 0 .5em; */
-}
-
-.contact li a:hover {
-    padding: 0 .5em;
-    text-decoration: none;
-    color: #00ebc7;
-    /* margin: 0 .5em; */
-}
 
 /* Animation */
 
@@ -908,7 +942,86 @@ body {
 
 
 /* Responsive */
+
 /* CSS Utama */
+
+/* hp layar kecil kek iphone */
+@media (max-width:575.98px) {
+    .circle {
+        position: absolute;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        /* background: #ffe6e6; */
+    }
+
+    .circle-1,
+    .circle-2,
+    .circle-3,
+    .circle-border {
+        display: none;
+    }
+
+    .quote {
+        height: 100%;
+        text-align: right;
+        font-size: 12px;
+        color: #00214d;
+    }
+
+    /* .contact-wrapper{
+        width: 500px;
+        justify-items: start;
+    } */
+
+    /* .contact-item_content{
+        font-size: 12px;
+    } */
+    .main-reachme {
+        padding: 1em;
+
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            justify-content: center;
+        }
+
+    }
+
+    .main-reachme h1 {
+        font-size: 28px;
+    }
+
+    .contact-item {
+        flex-direction: column;
+
+        .contact-item_content {
+            font-size: 16px !important;
+            text-align: center;
+        }
+
+    }
+
+    .contact-item-first {
+        width: 100px;
+        rotate: -5deg;
+    }
+
+    .contact-item-second {
+        max-width: max-content;
+        rotate: 10deg;
+        background-color: rgba(211, 218, 217, .3);
+    }
+
+    .contact-item-linkedin {
+        max-width: max-content;
+        background-color: rgba(0, 119, 181, .5);
+        rotate: 3deg;
+        max-lines: 1;
+    }
+
+
+}
 
 @media screen and (max-width: 768px) {
     .my-skill {
@@ -923,14 +1036,15 @@ body {
         }
     }
 
-    .main-reachme{
+    .main-reachme {
         height: 100%;
-        .contact-item-works{
+
+        .contact-item-works {
             rotate: -10deg;
         }
     }
 
-       .working-on-item,
+    .working-on-item,
     .working-on-item.reverse {
         flex-direction: column;
         text-align: center;
@@ -1044,7 +1158,7 @@ body {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
- .my-skill {
+    .my-skill {
         height: 70vh;
 
         .my-skill_body {
@@ -1056,43 +1170,45 @@ body {
         }
     }
 
-    .overview-wrap{
+    .overview-wrap {
         margin-top: 3em;
         height: 100%;
     }
 
-    .experience-cards, .experience-org  {
-    /* display: grid;
+    .experience-cards,
+    .experience-org {
+        /* display: grid;
     gap: 0px 2em; */
-    /* min-height: 200px; */
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1em;
-    /* justify-content: center; */
-    /* Memusatkan grid secara horizontal */
-    /* align-items: center; */
-}
-
-
-.experience-card{
-    min-height: 100%;
-    /* padding: 1em auto;  */
-}
-
-.experience-item{
-    max-width: 100%;
-    min-height: 100%;
-}
-
-.main-reachme{
-    height: 100%;
-
-    .contact-item-works{
-        rotate: -10deg;
+        /* min-height: 200px; */
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1em;
+        /* justify-content: center; */
+        /* Memusatkan grid secara horizontal */
+        /* align-items: center; */
     }
+
+
+    .experience-card {
+        min-height: 100%;
+        /* padding: 1em auto;  */
+    }
+
+    .experience-item {
+        max-width: 100%;
+        min-height: 100%;
+    }
+
+    .main-reachme {
+        height: 100%;
+
+        .contact-item-works {
+            rotate: -10deg;
+        }
+    }
+
+
 }
 
-    
-}
 /* 
 /* Laptop dan Small Desktop */
 /* @media (min-width: 1025px) and (max-width: 1280px) {
