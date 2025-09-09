@@ -1,6 +1,20 @@
 const projects = {
   android: [
     {
+      name: "Chatbot Multimodal with Gemini 2.5 Flash",
+      description:
+      "This is a mobile chatbot app built with Flutter, powered by the Gemini 2.5 Flash model. The app not only interacts with users via fast and responsive text-based conversations but also allows them to upload images.<br><br>With this feature, the model can understand and combine visual information from images with text-based queries, creating a richer, multimodal interaction. This provides a conversational experience beyond traditional NLP, making it a smart and highly interactive AI assistant",
+      tech: "Flutter, Gemini API, Gemini 2.5 Flash Model, Google AI Studio",
+      image: "../img/chatbot-gemini-prev.png",
+      link: "#",
+      techStack: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+        // "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
+        // "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Google-gemini-icon.svg/1024px-Google-gemini-icon.svg.png?20240826133250"
+      ],
+    },
+    {
       name: "Angkutin",
       description:
         "Angkutin is an app designed to facilitate coordination between communities and cleaners in waste management. <br><br>The app provides features such as daily waste collection notifications, waste transportation requests, and reporting of illegal waste piles, as well as monitoring the status of ongoing services. Angkutin helps the community interact efficiently with the cleaners without the need for direct communication, eases the transportation process, and ensures the environment remains clean. <br><br>The app has three main roles: the community, the cleaners, and admin, with customized features for each to ensure efficient waste management.",
@@ -10,7 +24,7 @@ const projects = {
       techStack: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
-        
+
       ],
     },
     {
@@ -26,7 +40,7 @@ const projects = {
       ],
     },
     {
-      name: "Absence",
+      name: "Geolocation and photo-based attendance",
       description:
         "An application to perform employee attendance by applying geofencing and camera media, consist of Employee and Admin user  ",
       tech: "Flutter, Provider, Google Maps API, Camera, Local Storage, Node.Js, Mongo.db, Figma",
@@ -119,6 +133,8 @@ const projects = {
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/LottieFiles_logo.svg/1597px-LottieFiles_logo.svg.png?20200720040237",
+
       ],
     },
     {
@@ -296,7 +312,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Get menu items
   const menuItems = document.querySelectorAll(".nav-list li");
-  menuItems[0].classList.add("active");
+  menuItems[1].classList.add("active");
 
   // Add click event listeners for each menu item
   menuItems.forEach((item) => {
@@ -316,6 +332,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Determine which projects to render
       switch (item.id) {
+        case "home-btn":
+            window.location.href = "https://famuh.github.io/web-portfolio/"; // arahkan ke halaman utama
+            break;
         case "mobile-btn":
           renderProjects("portfolioContainer", projects.android);
           break;
