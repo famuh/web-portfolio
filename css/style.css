@@ -405,14 +405,6 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* .working-on_description{
-    border: 1px #DCDCDC solid;
-        border-radius: 10px;
-    padding: 8px 1em;
-    margin-bottom: 1em;
-    background-color: white;
-} */
-
 .working-on-wrapper p {
     color: #333;
     margin-bottom: 0.5rem;
@@ -540,12 +532,6 @@ body {
 
 }
 
-/* .title-wrap:nth-child(2){
-    background-color: transparent;
-    color: #00214d;
-    outline: 5px solid rgba(183, 255, 209, 1);
-    } */
-
 /* btn portfolio */
 .btn-container {
     display: flex;
@@ -599,7 +585,6 @@ body {
     /* margin: 3em 1em; */
     padding: 3em 1em;
     flex-wrap: wrap;
-    /* background-color: #EEF5FF; */
 
 }
 
