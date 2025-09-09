@@ -762,7 +762,7 @@ body {
     /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: right;
     /* flex-direction: row; */
     /* width: 0vw; */
     height: 50vh;
@@ -948,9 +948,15 @@ body {
 
     .quote {
         height: 100%;
-        text-align: right;
+        text-align: center;
         font-size: 12px;
         color: #00214d;
+        flex-direction: column;
+
+        .quote_rocket-lottie{
+            width: 200px !important;
+            height: 200px !important;
+        }
     }
 
     /* .contact-wrapper{
