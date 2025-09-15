@@ -365,7 +365,9 @@ experienceList.forEach((element) => {
 const lastImage = document.createElement("img");
 lastImage.src = "./img/rocket-research.svg";
 lastImage.alt = "Starting a business";
-lastImage.style.transform = "scale(.7)";
+// lastImage.style.transform = "scale(.7)";
+lastImage.style.maxWidth = "100%";
+lastImage.style.height = "auto";
 
 experience.appendChild(lastImage);
 

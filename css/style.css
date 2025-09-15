@@ -127,15 +127,16 @@ body {
     margin: 1em 0px;
 }
 
-/* main {
+main {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-} */
+    gap: 1em;
+    /* height: 100vh; */
+}
 
 /* my-skill */
 .my-skill {
-    height: 70vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -196,12 +197,14 @@ body {
     /* height: 100%; */
     display: flex;
     flex-direction: column;
-    height: 70vh;
-    align-items: stretch;
+    /* gap: 5em; */
+    /* height: 70%; */
+    /* align-items: stretch; */
 }
 
 .overview {
     /* height: 100%; */
+    margin: 1em 0;
     flex: 1;
     display: flex;
     align-items: center;
@@ -765,7 +768,7 @@ body {
     text-align: right;
     /* flex-direction: row; */
     /* width: 0vw; */
-    height: 50vh;
+    height: 100vh;
     margin: 0px 3em;
     border-radius: 20px;
 
