@@ -147,9 +147,13 @@ body {
 }
 
 .closeDialog-btn {
-    border: none;
-    background-color: transparent;
+    border: 1px solid #ccccff;
+    border-radius: 10px;
     padding: 1em;
+}
+
+.closeDialog-btn:hover {
+    background-color: #ccccff;
 }
 
 dialog {
@@ -191,11 +195,19 @@ dialog {
     }
 }
 
+    .dialog-content-wrap{
+        display: flex;
+        /* flex-direction: row; */
+    gap: 2em;
+    }
 .dialog-content {
     margin-bottom: 15px;
+    text-align: justify;
     /* animation: fadeIn 3s ease-in-out; */
 
+
 }
+
 
 
 
@@ -262,6 +274,10 @@ dialog {
 
 /* Mobile */
 @media screen and (max-width: 768px) {
+      .dialog-content-wrap{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 
     .image-portfolio {
         height: 80%;
@@ -279,6 +295,10 @@ dialog {
 
 /* Tablet */
 @media (min-width: 769px) and (max-width: 1024px) {
+    .dialog-content-wrap{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 
     .portfolio-grid {
         width: 100%;

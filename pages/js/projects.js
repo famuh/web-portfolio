@@ -1,16 +1,30 @@
 const projects = {
   android: [
     {
+      name: "Food Recognizer",
+      description: "Food recognition application developed to help users identify food, find recipes, and get nutritional information. Users can upload a photo of a dish, and the app will process it in several stages: <br><br>1. <b>Food Recognition:</b> The app uses a food recognizer model from Kaggle to analyze the image and predict the type of food. The result is displayed along with a confidence score.<br><br>2. <b>Recipe Information:</b> Once the food is successfully identified, the app fetches detailed recipes and cooking instructions from TheMealDB API, presenting the information in a clear and easy-to-follow format.<br><br>3. <b>Nutritional Information:</b> A unique feature of this app is its ability to provide nutritional facts—such as calories, protein, and fats—using a customized Gemini 2.5 Flash model. This model can process specific requests to provide nutritional data relevant to the recognized food.<br><br>If the uploaded photo is not a food item, the app will display a 'not recognized' message, ensuring its focus remains solely on food recognition.",
+      tech: "Flutter, Kaggle, TensorFlow Lite, Firebase, Gemini API, Gemini 2.5 Flash Model Customized, Google AI Studio, TheMealDB API",
+      image: "../img/chatbot-gemini-prev.png",
+      link: "#",
+      demo: "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fvideo%2FScreen%20Recording%202025-09-17%20at%2020.01.42.mp4?alt=media&token=a39d1232-2463-4d28-bb02-070817265adf",
+      techStack: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kaggle/kaggle-original-wordmark.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Google-gemini-icon.svg/1024px-Google-gemini-icon.svg.png?20240826133250"
+      ],
+    },
+    {
       name: "Chatbot Multimodal with Gemini 2.5 Flash",
       description:
-      "This is a mobile chatbot app built with Flutter, powered by the Gemini 2.5 Flash model. The app not only interacts with users via fast and responsive text-based conversations but also allows them to upload images.<br><br>With this feature, the model can understand and combine visual information from images with text-based queries, creating a richer, multimodal interaction. This provides a conversational experience beyond traditional NLP, making it a smart and highly interactive AI assistant",
+        "This is a mobile chatbot app built with Flutter, powered by the Gemini 2.5 Flash model. The app not only interacts with users via fast and responsive text-based conversations but also allows them to upload images.<br><br>With this feature, the model can understand and combine visual information from images with text-based queries, creating a richer, multimodal interaction. This provides a conversational experience beyond traditional NLP, making it a smart and highly interactive AI assistant",
       tech: "Flutter, Gemini API, Gemini 2.5 Flash Model, Google AI Studio",
       image: "../img/chatbot-gemini-prev.png",
       link: "#",
+      demo: "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fvideo%2FScreen%20Recording%202025-09-17%20at%2020.28.54.mp4?alt=media&token=5024395b-4864-4fce-90d0-28619eb6cbef",
       techStack: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
-        // "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
-        // "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Google-gemini-icon.svg/1024px-Google-gemini-icon.svg.png?20240826133250"
       ],
     },
@@ -18,13 +32,14 @@ const projects = {
       name: "Angkutin",
       description:
         "Angkutin is an app designed to facilitate coordination between communities and cleaners in waste management. <br><br>The app provides features such as daily waste collection notifications, waste transportation requests, and reporting of illegal waste piles, as well as monitoring the status of ongoing services. Angkutin helps the community interact efficiently with the cleaners without the need for direct communication, eases the transportation process, and ensures the environment remains clean. <br><br>The app has three main roles: the community, the cleaners, and admin, with customized features for each to ensure efficient waste management.",
-      tech: "Flutter, Firebase, Google Maps API, Open Route Service API, Figma, Kanban Method",
+      tech: "Flutter, Firebase, Google Maps API, Open Route Service API, Open Street Map, Figma, Agile with Method",
       image: "../img/angkutin-prev.png",
+      demo: "",
       link: "https://github.com/angkutin/angkutin",
       techStack: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
-
+        "https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg",
       ],
     },
     {
@@ -33,6 +48,7 @@ const projects = {
         "Alquran App adalah aplikasi yang memudahkan membaca dan memahami Al-Qur'an, lengkap dengan terjemahan, tafsir, dan fitur pencarian.",
       tech: "Flutter, GetX, Theme Persistent",
       image: "../img/porto/alquranapp.png",
+      demo: "",
       link: "https://github.com/famuh/al-qur-an-app",
       techStack: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
@@ -46,6 +62,7 @@ const projects = {
       tech: "Flutter, Provider, Google Maps API, Camera, Local Storage, Node.Js, Mongo.db, Figma",
       image: "../img/absence-preview.png",
       link: "#",
+      demo: "",
       techStack: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
       ],
@@ -53,9 +70,10 @@ const projects = {
     {
       name: "Diatrofi",
       description:
-        "Diatrophy is a mobile application engaged in the health sector...",
+        "Diatrophy is a mobile application engaged in the health sector. Diatrophy provides features that help people maintain their food intake. Diatrophy also provides delicious and healthy food recipes. In addition, Diatrofi is also equipped with health-related news/articles that users can read.",
       tech: "Flutter, Provider, Web View, Figma",
       image: "../img/diatrofi-preview.png",
+      demo: "",
       link: "https://github.com/famuh/diatrofi-healthcare",
       techStack: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
@@ -65,9 +83,10 @@ const projects = {
       name: "Movies App",
       description:
         "Movies App provides information to users regarding movies that are currently showing, will be showing and top rated movies. Click on an item to view detailed information of the movie. Users can search for movies through the search menu.",
-      tech: "Flutter, Provider & BloC, Clean Architecture, CI/CD, Dependency Injection, Firebase Crashlytics",
+      tech: "Flutter, Provider & BloC, Clean Architecture, CI/CD, Dependency Injection, Firebase Crashlytics, MovieDB API",
       image: "../img/watch-prev.png",
       link: "#",
+      demo: "",
       techStack: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
@@ -78,7 +97,7 @@ const projects = {
       name: "News App",
       description:
         "News App provides information on the latest news in Indonesia. Users can read the news by pressing one of the items.",
-      tech: "Flutter, Provider",
+      tech: "Flutter, Provider, News API",
       image: "../img/none-image-preview.png",
       link: "#",
       techStack: [
@@ -94,6 +113,8 @@ const projects = {
       link: "#",
       techStack: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"
       ],
     },
     {
@@ -111,7 +132,7 @@ const projects = {
       name: "GitHub User App",
       description:
         "GitHub User is an application that allows users to search for GitHub users and view their profiles. Users can enter a username in the search bar. The application will display a list of users that match the search. Users can then select a user to view their profile.",
-      tech: "Flutter, Provider",
+      tech: "Flutter, Provider, GitHub API",
       image: "../img/none-image-preview.png",
       link: "#",
       techStack: [
@@ -257,6 +278,15 @@ function renderProjects(containerId, projectList, isVideo = false) {
                 
                     `;
     } else if (typeof project === "object") {
+      let iframeSection = "";
+if (project.demo) {
+  iframeSection = `
+    <iframe width="160" height="320" src="${project.demo}" frameborder="0"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  `;
+}
+
       item.innerHTML = `
             <div class="card">
                     <div class="card-content">
@@ -267,16 +297,19 @@ function renderProjects(containerId, projectList, isVideo = false) {
 
                       <!-- Dialog for showing full content -->
                       <dialog class="dialog">
-                      
                           <h3>${project.name}</h3>
-                          
                           <div class="dialog-tech">
                             <h4>Made with ${project.tech}</h4>
                           </div>
+                          <div class="dialog-content-wrap">
                           <p class="dialog-content">${project.description}</p>
+                            ${iframeSection}
+                          </div>
+                          
                         <button class="closeDialog-btn">Ok, I See &#128077;</button>
                       </dialog>
                     </div>
+
                     <div class="card-image">
                     <a href="${project.image}" target="_self"><img src="${project.image}" alt="${project.name}"></a>
                     </div>
@@ -333,8 +366,8 @@ document.addEventListener("DOMContentLoaded", () => {
       // Determine which projects to render
       switch (item.id) {
         case "home-btn":
-            window.location.href = "https://famuh.github.io/web-portfolio/"; // arahkan ke halaman utama
-            break;
+          window.location.href = "https://famuh.github.io/web-portfolio/"; // arahkan ke halaman utama
+          break;
         case "mobile-btn":
           renderProjects("portfolioContainer", projects.android);
           break;
