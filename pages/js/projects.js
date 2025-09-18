@@ -4,7 +4,7 @@ const projects = {
       name: "Food Recognizer",
       description: "Food recognition application developed to help users identify food, find recipes, and get nutritional information. Users can upload a photo of a dish, and the app will process it in several stages: <br><br>1. <b>Food Recognition:</b> The app uses a food recognizer model from Kaggle to analyze the image and predict the type of food. The result is displayed along with a confidence score.<br><br>2. <b>Recipe Information:</b> Once the food is successfully identified, the app fetches detailed recipes and cooking instructions from TheMealDB API, presenting the information in a clear and easy-to-follow format.<br><br>3. <b>Nutritional Information:</b> A unique feature of this app is its ability to provide nutritional facts—such as calories, protein, and fats—using a customized Gemini 2.5 Flash model. This model can process specific requests to provide nutritional data relevant to the recognized food.<br><br>If the uploaded photo is not a food item, the app will display a 'not recognized' message, ensuring its focus remains solely on food recognition.",
       tech: "Flutter, Kaggle, TensorFlow Lite, Firebase, Gemini API, Gemini 2.5 Flash Model Customized, Google AI Studio, TheMealDB API",
-      image: "../img/chatbot-gemini-prev.png",
+      image: "../img/food-recognizer.png",
       link: "#",
       demo: "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fvideo%2FScreen%20Recording%202025-09-17%20at%2020.01.42.mp4?alt=media&token=a39d1232-2463-4d28-bb02-070817265adf",
       techStack: [
