@@ -145,9 +145,47 @@ const projects = {
   ],
   website: [
     {
+      name: "Fadhil Portfolio V2",
+      description: "Web portfolio yang dibangun dengan NextJs, Tailwindcss untuk styling, Framer Motion untuk animasi dan juga menggunakan shadcn/ui untuk beberapa komponennya.",
+      tech: "Next JS, Tailwind Css, Shadcn, Framer Motion",
+      image: "../img/porto-v2.png",
+      link: "https://fadhilmuhammad-portfolio-v2.vercel.app/",
+      webDemo: "https://firebasestorage.googleapis.com/v0/b/angkutin-7fc40.appspot.com/o/fadhil-porto%2Fvideo%2FScreen%20Recording%202025-10-29%20at%2018.59.38.mp4?alt=media&token=46938d9d-6c8d-4afb-bf94-2a267fd8fadb",
+      techStack: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-plain.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg",
+        "https://images.seeklogo.com/logo-png/51/1/shadcn-ui-logo-png_seeklogo-519786.png"
+      ],
+    },
+    {
+      name: "Threads App",
+      description: "Website untuk berdiskusi secara interaktif. Pengguna dapat membuat thread (topik diskusi), memberikan balasan, serta membaca dan mengikuti percakapan antar pengguna dengan mudah.",
+      tech: "React Js, CSS, Redux, EsLint",
+      image: "../img/thread-web.png",
+      link: "#",
+      techStack: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eslint/eslint-original.svg"
+      ],
+    },
+    {
+      name: "Admin Panel - Angkutin",
+      description: "Admin panel yang mengelola data pengguna (Masyarakat, Petugas Sampah, dan Admin), mengelola laporan timbunan sampah atau permintaan pengangkutan sampah oleh masyarakat. Disertai dashboard yang berisi rangkuman data. Setiap perubahan data dilakukan secara real-time menggunakan Firebase Firestore.",
+      tech: "Flutter, Firebase, GetX",
+      image: "../img/angkutin-admin.png",
+      link: "https://angkutin-7fc40.web.app/#/login",
+      techStack: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
+      ],
+    },
+    {
       name: "Personal Web Portfolio",
       description: "",
-      tech: "HTML, CSS, Javascript",
+      tech: "HTML, CSS, Javascript, Lottie",
       image: "../img/portfolio-prev.png",
       link: "https://github.com/famuh/Covid-19-World-Tracker",
       techStack: [
@@ -158,8 +196,9 @@ const projects = {
 
       ],
     },
+
     {
-      name: "Simple CRUD React-Express",
+      name: "CRUD User React-Express",
       description: "Aplikasi ini merupakan proyek belajar untuk membangun aplikasi fullstack CRUD USER sederhana menggunakan ReactJS di frontend dan ExpressJS di backend. Akses source code di branch Master. Fiturnya ialah CRUD (Create, Read, Update, Delete) user sederhana",
       tech: "ExpressJs, ReactJs, ReactRouterDom, BulmaCss, Axios, MySQL",
       image: "../img/portfolio-prev.png",
@@ -279,13 +318,26 @@ function renderProjects(containerId, projectList, isVideo = false) {
                     `;
     } else if (typeof project === "object") {
       let iframeSection = "";
-if (project.demo) {
-  iframeSection = `
+      let webFrameSection = "";
+      if (project.demo) {
+        iframeSection = `
     <iframe width="160" height="320" src="${project.demo}" frameborder="0"
       allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen></iframe>
   `;
-}
+      }
+
+      if (project.webDemo) {
+        webFrameSection = `
+  <iframe
+  class="web-demo"
+  src=${project.webDemo}
+  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoplay"
+  allowfullscreen
+></iframe>
+
+  `;
+      }
 
       item.innerHTML = `
             <div class="card">
@@ -298,9 +350,11 @@ if (project.demo) {
                       <!-- Dialog for showing full content -->
                       <dialog class="dialog">
                           <h3>${project.name}</h3>
+                          
                           <div class="dialog-tech">
                             <h4>Made with ${project.tech}</h4>
                           </div>
+                          ${webFrameSection}
                           <div class="dialog-content-wrap">
                           <p class="dialog-content">${project.description}</p>
                             ${iframeSection}

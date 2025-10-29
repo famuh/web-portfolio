@@ -165,9 +165,16 @@ dialog {
     animation: softGradient 15s ease infinite;
     /* background-size: 300% 300%; */
     max-width: 70%;
-
-
 }
+
+.web-demo {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
 
 @keyframes softGradient {
     0% {
