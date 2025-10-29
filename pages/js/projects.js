@@ -332,7 +332,7 @@ function renderProjects(containerId, projectList, isVideo = false) {
   <iframe
   class="web-demo"
   src=${project.webDemo}
-  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoplay"
+  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
 ></iframe>
 
